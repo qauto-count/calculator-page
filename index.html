@@ -10,144 +10,169 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="icons/Qauto.png" alt="Qauto">
+    <div class="calculator_body">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="icons/Qauto.png" alt="Qauto">
+                </div>
             </div>
-        </div>
-        <div class="tab">
-            <button data-id="USA" value="USA" class="tablinks active">USA</button>
-            <button data-id="Canada" value="Canada" class="tablinks active">CANADA</button>
-        </div>
-    </header>
-    <section class="shipping_cost">
-        <div class="title">Розрахунок вартості доставки авто</div>
-        <hr class="solid">
-        <div class="container_item">
-            <div class="calculator calculator_custom">
-                <div class="input_wrapper">
-                    <div class="input_field">
-                        <div class="content">
-                            <label class="select_nam">Рівень</label>
-                            <select>
-                                <option value="0">Виберіть Рівень</option>
-                                <option value="1">item 1</option>
-                                <option value="2">item 2</option>
-                                <option value="3">item 3</option>
-                                <option value="4">item 4</option>                                 
-                            </select>                            
-                        </div>                        
-                    </div>
-                    <div class="input_field">
-                        <div class="content">
-                            <label class="select_nam">Аукціон</label>
-                            <select>
-                                <option value="0">Виберіть аукціон</option>
+            <div class="tab">
+                <div data-id="USA" value="USA" class="tablinks active">USA</div>
+                <div data-id="Canada" value="Canada" class="tablinks active">CANADA</div>
+            </div>
+        </header>
+        <section class="shipping_cost">
+            <div class="title">Розрахунок вартості доставки авто</div>
+            <hr class="solid">
+            <div class="container_item">
+                <div class="calculator calculator_custom">
+                    <div class="input_wrapper">
+                        <div class="input_field">
+                            <div class="content">
+                                <label class="select_nam">Рівень</label>
+                                <select>
+                                    <a href="#">Виберіть рівень</a>
+                                    <option value="0"></option>
+                                    <option value="1">item 1</option>
+                                    <option value="2">item 2</option>
+                                    <option value="3">item 3</option>
+                                    <option value="4">item 4</option>
+                                    <option value="5">item 5</option> 
+                                </select>
+                                
+                            </div>                        
+                        </div>
+                        <div class="input_field">
+                            <div class="content">
+                                <label class="select_nam">Аукціон</label>
+                                <select>
+                                    <option value="0">Виберіть аукціон</option>
+                                    <option value="1">item 1</option>
+                                    <option value="2">item 2</option>
+                                    <option value="3">item 3</option>
+                                    <option value="4">item 4</option>
+                                    <option value="5">item 5</option> 
+                                </select>
+                                
+                            </div>                        
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Локація</label>
+                            <select name="" id="">
+                                <option value="0">Виберіть локацію</option>
                                 <option value="1">item 1</option>
                                 <option value="2">item 2</option>
                                 <option value="3">item 3</option>
                                 <option value="4">item 4</option>
-                                <option value="5">item 5</option> 
-                            </select>                            
-                        </div>                        
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Локація</label>
-                        <select name="" id="">
-                            <option value="0">Виберіть локацію</option>
-                            <option value="1">item 1</option>
-                            <option value="2">item 2</option>
-                            <option value="3">item 3</option>
-                            <option value="4">item 4</option>
-                            <option value="5">item 5</option>
-                        </select>
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Пункт призначення</label>
-                        <select name="" id="">
-                            <option value="0">Виберіть пункт призначення</option>
-                            <option value="4">item 1</option>
-                            <option value="4">item 2</option>
-                            <option value="4">item 3</option>
-                            <option value="4">item 4</option>
-                            <option value="4">item 5</option>
-                        </select>
-                    </div>
-                    <div class="field_btn">
-                        <button class="calculate_delivery">Розрахувати доставку</button>
+                                <option value="5">item 5</option>
+                            </select>
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Пункт призначення</label>
+                            <select name="" id="">
+                                <option value="0">Виберіть пункт призначення</option>
+                                <option value="4">item 1</option>
+                                <option value="4">item 2</option>
+                                <option value="4">item 3</option>
+                                <option value="4">item 4</option>
+                                <option value="4">item 5</option>
+                            </select>
+                        </div>
+                        <div class="field_btn">
+                            <div class="calculate_delivery">Розрахувати доставку</div>
+                        </div>
                     </div>
                 </div>
+                <div class="calculator">
+                    <div class="input_wrapper">
+                        <div class="input_field">
+                            <label class="select_nam">Ціна лоту</label>
+                            <input class="value" input type="search">
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Аукціонні збори</label>
+                            <input class="value" input type="search">
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Рік випуску</label>
+                            <input class="value" input type="search">
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Паливо</label>
+                            <select name="" id="">
+                                <option value="0">Виберіть тип палива</option>
+                                <option value="1">item 1</option>
+                                <option value="2">item 2</option>
+                                <option value="3">item 3</option>
+                                <option value="4">item 4</option>
+                                <option value="5">item 5</option>
+                            </select>
+                        </div>
+                        <div class="input_field">
+                            <label class="select_nam">Об'єм,сm³</label>
+                            <input class="value" input type="search">
+                        </div>
+                        <div class="field_btn">
+                            <div class="calculate">Розрахувати</div>
+                        </div>
+                    </div>                
+                </div>
+                <div class="second_row">                    
+                    <table class="results_delivery">
+                        <tbody>
+                            <tr>
+                                <td>Відправлення з порту</td>
+                                <td id="result-route">newyork</td>
+                            </tr>
+                            <tr>
+                                <td>Вартість доставки у Європу</td>
+                                <td id="result">1100 $</td>
+                            </tr>
+                            <tr>
+                                <td>Авто</td>
+                                <td id="full_price">Заповніть усі дані</td>                            
+                            </tr>
+                            <tr>
+                                <td>Розмитнення</td>
+                                <td id="tax_price">Заповніть усі дані</td>
+                            </tr>
+                            <tr>
+                              <td>Значення</td>
+                              <td id="dealer_price">Заповніть усі дані</td> 
+                            </tr>
+                            <tr>
+                               <td>Комплекс</td>
+                               <td id="complex_price">Заповніть усі дані</td>
+                            </tr>
+                            <tr>
+                                <td>Ціна "Під ключ"</td>
+                                <td id="key_price">Заповніть усі дані</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>               
             </div>
-            <div class="calculator">
-                <div class="input_wrapper">
-                    <div class="input_field">
-                        <label class="select_nam">Ціна лоту</label>
-                        <input class="value" input type="search">
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Аукціонні збори</label>
-                        <input class="value" input type="search">
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Рік випуску</label>
-                        <input class="value" input type="search">
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Паливо</label>
-                        <select name="" id="">
-                            <option value="0">Виберіть тип палива</option>
-                            <option value="1">item 1</option>
-                            <option value="2">item 2</option>
-                            <option value="3">item 3</option>
-                            <option value="4">item 4</option>
-                            <option value="5">item 5</option>
-                        </select>
-                    </div>
-                    <div class="input_field">
-                        <label class="select_nam">Об'єм,сm³</label>
-                        <input class="value" input type="search">
-                    </div>
-                    <div class="field_btn">
-                        <button class="calculate_delivery">Розрахувати</button>
-                    </div>
-                </div>                
+        </section>
+
+    </div>
+    
+    <div class="wrapper_logo">
+        <div class="container_logo">
+            <h1>Вхід</h1>
+            <div class="container_item">                
+                <input type="text" placeholder="Логін" name="uname" required>    
             </div>
-            <div class="second_row">                    
-                <table class="results_delivery">
-                    <tbody>
-                        <tr>
-                            <td>Відправлення з порту</td>
-                            <td id="result-route">newyork</td>
-                        </tr>
-                        <tr>
-                            <td>Вартість доставки у Європу</td>
-                            <td id="result">1100 $</td>
-                        </tr>
-                        <tr>
-                            <td>Авто</td>
-                            <td id="full_price">Заповніть усі дані</td>
-                        </tr>
-                        <tr>
-                            <td>Розмитнення</td>
-                            <td id="tax_price">Заповніть усі дані</td>
-                        </tr>
-                        <tr>
-                          <td>Значення</td>
-                          <td id="dealer_price">Заповніть усі дані</td> 
-                        </tr>
-                        <tr>
-                           <td>Комплекс</td>
-                           <td id="complex_price">Заповніть усі дані</td>
-                        </tr>
-                        <tr>
-                            <td>Ціна "Під ключ"</td>
-                            <td id="key_price">Заповніть усі дані</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>               
-        </div>
-    </section>    
+            <div class="container_item">   
+            <input type="password" placeholder="Пароль" name="psw" required>
+            </div>
+            <div class="container_item_remember">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Запам'ятати мене
+                    </label> 
+            </div>                      
+            <div class="button">Вхід</div>
+        </div>             
+    </div>       
 </body>
 </html>
