@@ -17,28 +17,26 @@
                     <img src="icons/Qauto.png" alt="Qauto">
                 </div>
             </div>
-            <div class="tab">
-                <div data-id="USA" value="USA" class="tablinks active">USA</div>
-                <div data-id="Canada" value="Canada" class="tablinks active">CANADA</div>
-                <div data-id="Canada" value="Canada" class="tablinks active">EUROPE</div>
+            <div id="country" class="tab">
+                <div class="tablinks active">USA</div>
+                <div class="tablinks active">CANADA</div>
+                <div class="tablinks active">EUROPE</div>
             </div>
         </header>
         <section class="shipping_cost">
             <div class="title">Розрахунок вартості доставки авто</div>
             <hr class="solid">
             <div class="container_item">
-                <div class="calculator calculator_custom">
+                <div id="calculator_1" class="calculator calculator_custom">
                     <div class="input_wrapper">
                         <div class="input_field">
                             <div class="content">
                                 <label class="select_nam" >Рівень</label>
-                                <select type="password" placeholder="Пароль" name="psw" required>                                    
-                                    <option value="0">Виберіть рівень</option>
-                                    <option value="1">item 1</option>
-                                    <option value="2">item 2</option>
-                                    <option value="3">item 3</option>
-                                    <option value="4">item 4</option>
-                                    <option value="5">item 5</option> 
+                                <select>                             
+                                    <option value="1">Дилерський рівень 1</option>
+                                    <option value="2">Дилерський рівень 2</option>
+                                    <option value="3">Дилерський рівень 3</option>
+                                    <option value="4">Роздріб</option>                                    
                                 </select>
                                 
                             </div>                        
@@ -46,37 +44,23 @@
                         <div class="input_field">
                             <div class="content">
                                 <label class="select_nam">Аукціон</label>
-                                <select>
-                                    <option value="0">Виберіть аукціон</option>
-                                    <option value="1">item 1</option>
-                                    <option value="2">item 2</option>
-                                    <option value="3">item 3</option>
-                                    <option value="4">item 4</option>
-                                    <option value="5">item 5</option> 
+                                <select id="auction">
+                                    <option value="0">Виберіть аукціон (країна не вибрана)</option>
+                                     
                                 </select>
                                 
                             </div>                        
                         </div>
                         <div class="input_field">
                             <label class="select_nam">Локація</label>
-                            <select name="" id="">
-                                <option value="0">Виберіть локацію</option>
-                                <option value="1">item 1</option>
-                                <option value="2">item 2</option>
-                                <option value="3">item 3</option>
-                                <option value="4">item 4</option>
-                                <option value="5">item 5</option>
+                            <select id="location">
+                                <option value="0">Виберіть локацію</option>                                
                             </select>
                         </div>
                         <div class="input_field">
                             <label class="select_nam">Пункт призначення</label>
-                            <select name="" id="">
-                                <option value="0">Виберіть пункт призначення</option>
-                                <option value="4">item 1</option>
-                                <option value="4">item 2</option>
-                                <option value="4">item 3</option>
-                                <option value="4">item 4</option>
-                                <option value="4">item 5</option>
+                            <select id="destination">
+                                <option value="0">Виберіть пункт призначення</option>                                
                             </select>
                         </div>
                         <div class="field_btn">
@@ -84,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="calculator">
+                <div id="calculator_2" class="calculator">
                     <div class="input_wrapper">
                         <div class="input_field">
                             <label class="select_nam">Ціна лоту</label>
@@ -118,7 +102,7 @@
                         </div>
                     </div>                
                 </div>
-                <div class="second_row">                    
+                <div id="result-table" class="second_row">                    
                     <table class="results_delivery">
                         <tbody>
                             <tr>
@@ -154,9 +138,7 @@
                 </div>               
             </div>
         </section>
-
-    </div>
-    
+    </div>    
     <div class="wrapper_logo">
         <div class="container_logo">
             <h1>Вхід</h1>
@@ -173,6 +155,10 @@
             </div>                      
             <div class="button">Вхід</div>
         </div>             
-    </div>       
+    </div>
+    <script src="js_data/canada.js"></script>
+    <script src="js_data/usa.js"></script>
+    <script src="js_data/destination.js"></script>
+    <script src="js/script.js"></script>       
 </body>
 </html>
