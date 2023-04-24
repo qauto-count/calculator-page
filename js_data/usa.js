@@ -3,7 +3,7 @@ let USA = {
     auction: {
         COPART: {
             location: {
-                Savannah: {
+                GA: {
                     value_0: ['APPLETON - WI', 925],
                     value_1: ['ATLANTA EAST - GA', 500],
                     value_2: ['ATLANTA NORTH - GA', 500],
@@ -235,7 +235,7 @@ let USA = {
         },
         IAAI: {
             location: {
-                Savannah: {
+                GA: {
                     value_0: ['ADESA BIRMINGHAM - AL', 550],
                     value_1: ['APPLETON - WI', 925],
                     value_2: ['ASHEVILLE - NC', 525],
@@ -455,7 +455,7 @@ let USA = {
         },
         Mannheim:{
             location: {
-                Savannah: {
+                GA: {
                     value_0: ['ATLANTA - GA', 500],
                     value_1: ['BIRMINGHAM - AL', 575],
                     value_2: ['CHARLOTTE - NC', 500],
