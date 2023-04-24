@@ -27,13 +27,13 @@
         <section class="shipping_cost">
             <div class="title">Розрахунок вартості доставки авто</div>
             <hr class="solid">
-            <div class="container_item">
-                <div id="calculator_1" class="calculator calculator_custom">
+            <div id="calculator_1" class="container_item">
+                <div class="calculator calculator_custom">
                     <div class="input_wrapper">
                         <div class="input_field">
                             <div class="content">
                                 <label class="select_nam" >Рівень</label>
-                                <select>                             
+                                <select class="js-example-basic-single" id="level">                             
                                     <option value="1">Дилерський рівень 1</option>
                                     <option value="2">Дилерський рівень 2</option>
                                     <option value="3">Дилерський рівень 3</option>
@@ -52,9 +52,9 @@
                                 
                             </div>                        
                         </div>
-                        <div class="input_field">
+                        <div class="input_field search_select_box">
                             <label class="select_nam">Локація</label>
-                            <select id="location">
+                            <select id="location" class="selectpicker" data-live-search="true">
                                 <option value="0">Виберіть локацію</option>                                
                             </select>
                         </div>
@@ -65,7 +65,7 @@
                             </select>
                         </div>
                         <div class="field_btn">
-                            <div class="calculate_delivery">Розрахувати доставку</div>
+                            <div id="calculated_1" class="calculate_delivery">Розрахувати доставку</div>
                         </div>
                     </div>
                 </div>
@@ -73,19 +73,19 @@
                     <div class="input_wrapper">
                         <div class="input_field">
                             <label class="select_nam">Ціна лоту</label>
-                            <input class="value" input type="search">
+                            <input id="lot_price_input" class="value" type="text" onkeypress="validate(event)">
                         </div>
-                        <div class="input_field">
+                        <!-- <div class="input_field">
                             <label class="select_nam">Аукціонні збори</label>
                             <input class="value" input type="search">
-                        </div>
+                        </div> -->
                         <div class="input_field">
                             <label class="select_nam">Рік випуску</label>
                             <input class="value" input type="search">
                         </div>
                         <div class="input_field">
                             <label class="select_nam">Паливо</label>
-                            <select name="" id="">
+                            <select >
                                 <option value="0">Виберіть тип палива</option>
                                 <option value="1">item 1</option>
                                 <option value="2">item 2</option>
@@ -99,7 +99,7 @@
                             <input class="value" input type="search">
                         </div>
                         <div class="field_btn">
-                            <div class="calculate">Розрахувати</div>
+                            <div id="calculated_2" class="calculate_delivery">Розрахувати</div>
                         </div>
                     </div>                
                 </div>
@@ -111,28 +111,36 @@
                                 <td id="result-route">newyork</td>
                             </tr>
                             <tr>
-                                <td>Вартість доставки у Європу</td>
-                                <td id="result">1100 $</td>
+                                <td>Вартість доставки</td>
+                                <td><span id="result">Заповніть усі дані</span> $</td>
                             </tr>
                             <tr>
-                                <td>Авто</td>
-                                <td id="full_price">Заповніть усі дані</td>                            
+                                <td>Авто (в т.ч. аукціонний збір)</td>
+                                <td ><span id="full_price">Заповніть усі дані</span>$</td>                            
                             </tr>
                             <tr>
                                 <td>Розмитнення</td>
-                                <td id="tax_price">Заповніть усі дані</td>
+                                <td><span id="tax_price">0</span> $</td>
                             </tr>
                             <tr>
-                              <td>Значення</td>
-                              <td id="dealer_price">Заповніть усі дані</td> 
+                              <td>Дилерські послуги</td>
+                              <td><span id="dealer_price">Заповніть усі дані</span> $</td> 
                             </tr>
                             <tr>
                                <td>Комплекс</td>
-                               <td id="complex_price">Заповніть усі дані</td>
+                               <td><span id="complex_price">Заповніть усі дані</span> $</td>
+                            </tr>
+                            <tr>
+                                <td>Сертифікація</td>
+                                <td><span id="certificate">Заповніть усі дані</span> $</td>
+                            </tr>
+                            <tr>
+                                <td>МРЕО</td>
+                                <td><span id="mreo">Заповніть усі дані</span> $ + пенсійний збір</td>
                             </tr>
                             <tr>
                                 <td>Ціна "Під ключ"</td>
-                                <td id="key_price">Заповніть усі дані</td>
+                                <td><span id="key_price">Заповніть усі дані</span> $ + пенсійний збір</td>
                             </tr>
                         </tbody>
                     </table>
@@ -157,9 +165,29 @@
             <div class="button">Вхід</div>
         </div>             
     </div>
+    <script >
+        //input number
+        function validate(evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode( key );
+            var regex = /[0-9]|\./;
+            if( !regex.test(key) ) {
+                theEvent.returnValue = false;
+                if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        }
+        //
+    </script>
+
     <script src="js_data/canada.js"></script>
     <script src="js_data/usa.js"></script>
     <script src="js_data/destination.js"></script>
-    <script src="js/script.js"></script>       
+    <script src="js_data/services.js"></script>
+    <script src="js_data/auction_tax.js"></script>
+    <script src="js_data/other_data.js"></script>
+
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
