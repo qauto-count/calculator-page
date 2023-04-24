@@ -4,11 +4,17 @@ let objData = {
         USA: {},
         CANADA: {}
     },
-    destination: {}
+    destination: {},
+    services: {},
+    auction_tax: {},
+    other_data: {}
 };
 objData.country.USA = USA;
 objData.country.CANADA = CANADA;
 objData.destination = destination;
+objData.services = services;
+objData.auction_tax = auction_tax;
+objData.other_data = other_data;
 
 
 window.addEventListener('DOMContentLoaded', function() {
@@ -17,17 +23,24 @@ window.addEventListener('DOMContentLoaded', function() {
                 button_country = wrapper_button_country.getElementsByTagName('div'),
 
             wrapper_calcalculator_1 = document.getElementById('calculator_1'),
+                select_level = document.getElementById('level'),
+
                 select_auction_name = document.getElementById('auction'),
                 select_location_name = document.getElementById('location'),
                 select_destination_name = document.getElementById('destination'),
                     
             wrapper_calcalculator_2 = document.getElementById('calculator_2'),
-            wrapper_result_table = document.getElementById('result-table');
+            wrapper_result_table = document.getElementById('result-table'),
+            button_calculated_1 = document.getElementById('calculated_1'),
+            button_calculated_2 = document.getElementById('calculated_2');
 
 
-        let active_auction = '',
+        let active_country = '',
+            active_level = '',
+
+            active_auction = '',
             active_region_name = '',
-            active_country = '',
+            
 
             arr_remove_auction_name = '',
             arr_auction_option = [],
@@ -36,9 +49,11 @@ window.addEventListener('DOMContentLoaded', function() {
             arr_location_option = [],
             arr_name_location = [],
             arr_cost_location = [],
+            arr_region_location = [],
             
             arr_remove_destination_name = '',
-            arr_destination_option = [];
+            arr_destination_option = [],
+            total_value = 0;
 
             wrapper_calcalculator_2.style.display = 'none';
             wrapper_result_table.style.display = 'none';
@@ -84,16 +99,21 @@ window.addEventListener('DOMContentLoaded', function() {
                             for(let i = 0; i < Object.keys(objData.country[name_obj_country].auction[active_auction].location[active_region_name]).length; i++) {
                                 arr_name_location.push(objData.country[name_obj_country].auction[active_auction].location[active_region_name]['value_'+i][0]);
                                 arr_cost_location.push(objData.country[name_obj_country].auction[active_auction].location[active_region_name]['value_'+i][1]);
+                                arr_region_location.push(active_region_name);
                             }
                         }
                         for(let i = 0; i < arr_name_location.length; i++) {
                             arr_location_option[i] =  document.createElement('option');
-                            arr_location_option[i].setAttribute('value', arr_cost_location[i]);
+                            arr_location_option[i].setAttribute('value', i);
+                            arr_location_option[i].setAttribute('data_value', arr_cost_location[i]);
+                            arr_location_option[i].setAttribute('name', arr_region_location[i]);
                             arr_location_option[i].textContent = arr_name_location[i];
                             select_location_name.appendChild(arr_location_option[i]);
                         }
+
                         arr_name_location = [];
                         arr_cost_location = [];
+                        arr_region_location = [];
                         //
                         //Заповнення пункту призначення
                         for(let i =0; i < objData.destination.destination_name.length; i++) {
@@ -135,25 +155,117 @@ window.addEventListener('DOMContentLoaded', function() {
                     for(let i = 0; i < Object.keys(objData.country[active_country].auction[active_auction].location[active_region_name]).length; i++) {
                         arr_name_location.push(objData.country[active_country].auction[active_auction].location[active_region_name]['value_'+i][0]);
                         arr_cost_location.push(objData.country[active_country].auction[active_auction].location[active_region_name]['value_'+i][1]);
+                        arr_region_location.push(active_region_name);
                     }
                 }
                 for(let i = 0; i < arr_name_location.length; i++) {
                     arr_location_option[i] =  document.createElement('option');
-                    arr_location_option[i].setAttribute('value', arr_cost_location[i]);
+                    arr_location_option[i].setAttribute('value', i);
+                    arr_location_option[i].setAttribute('data_value', arr_cost_location[i]);
+                    arr_location_option[i].setAttribute('name', arr_region_location[i]);
                     arr_location_option[i].textContent = arr_name_location[i];
                     select_location_name.appendChild(arr_location_option[i]);
                 }
                 arr_name_location = [];
                 arr_cost_location = [];
+                arr_region_location = [];
                 //
-
             }
-            //console.log(active_auction);
         });
-
-
-
         //////
+
+        ///////Подія 'click' на кнопку обрахунку
+        wrapper_calcalculator_1.addEventListener('click', function(event) {
+            let target = event.target;
+            if(target == button_calculated_1 || target == button_calculated_2) {
+                let accses_calculated = false,
+                    arr_calculated_data = [0, 0];
+                for(let i = 0; i < button_country.length; i++) {
+                    if(button_country[i].classList.contains('status_on')) {
+                        accses_calculated = true;
+                    }
+                }
+                if(accses_calculated) {
+                    //визначення потрібних елементів
+                    //визначення активної країни (регіону)
+                    for(let i =0; i < button_country.length; i++) {
+                        if(button_country[i].classList.contains('status_on')) {
+                            active_country = button_country[i].textContent;
+                        }
+                    }
+                    //
+                    arr_location_option = select_location_name.getElementsByTagName('option');
+                    for(let i =0; i < arr_location_option.length; i++) {
+                        if(select_location_name.value == arr_location_option[i].value) {
+                            active_region_name = arr_location_option[i].getAttribute('name');
+                            arr_calculated_data[0] = Number(arr_location_option[i].getAttribute('data_value'));
+                        }
+                    }
+                    let index_arr_location_name = '';
+                    for(let i = 0; i < objData.destination['location_name_'+active_country].length; i++) {
+                        if(objData.destination['location_name_'+active_country][i] == active_region_name) {
+                            index_arr_location_name = i;
+                        }
+                    }
+                    arr_location_option = [];
+                    arr_calculated_data[1] = Number(objData.destination.country[active_country]['level_'+select_level.value]['destination_cost_'+select_destination_name.value][index_arr_location_name]);
+                    
+                    wrapper_calcalculator_2.style.display = 'flex';
+                    wrapper_result_table.style.display = 'flex';
+                    let data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
+
+                    document.getElementById('result-route').textContent = active_region_name;
+                    document.getElementById('result').textContent = data_calc_1;
+
+                    arr_calculated_data[2] = Number(objData.services.country.all['level_'+select_level.value].services_cost);
+                    document.getElementById('dealer_price').textContent = arr_calculated_data[2];
+                    
+                    arr_calculated_data[3] = Number(objData.services.country.all['level_'+select_level.value].complex_0[select_destination_name.value]);
+                    document.getElementById('complex_price').textContent = arr_calculated_data[3];
+                    //лот і аукціонний збір
+                    let lot_price_input = Number(document.getElementById('lot_price_input').value);
+                    let auction_tax_value = 0;
+                    active_auction = select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent;
+                    for(let i = 0; i < Object.keys(objData.auction_tax.lot_data).length; i++) {
+                        objData.auction_tax.lot_data['data_' + i].marg_min
+                        objData.auction_tax.lot_data['data_' + i].marg_max
+                        if(objData.auction_tax.lot_data['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax.lot_data['data_' + i].marg_max) {
+                            auction_tax_value = objData.auction_tax.lot_data['data_' + i].cost + objData.auction_tax.change_data[active_auction];
+                        }
+                    }
+                    arr_calculated_data[4] = lot_price_input + auction_tax_value;
+                    document.getElementById('full_price').textContent = arr_calculated_data[4];
+                    //
+                    //сертифікат і мрео
+                        //визначення value поточного рівня
+                        active_level = select_level.value;
+                        //
+                        if(active_level == 4) {
+                            arr_calculated_data[5] = objData.other_data.certificate;
+                            arr_calculated_data[6] = objData.other_data.mreo;
+                            document.getElementById('certificate').closest('tr').style.display = 'table-row';
+                                document.getElementById('certificate').textContent = arr_calculated_data[5];
+                            document.getElementById('mreo').closest('tr').style.display = 'table-row';
+                                document.getElementById('mreo').textContent = arr_calculated_data[6];
+                            
+                        } else {
+                            document.getElementById('certificate').closest('tr').style.display = 'none';
+                            document.getElementById('mreo').closest('tr').style.display = 'none';
+                            arr_calculated_data[5] = 0;
+                            arr_calculated_data[6] = 0;
+                        }
+                    //
+                    for(let i = 0; i < arr_calculated_data.length; i++) {
+                        total_value = total_value + arr_calculated_data[i];
+                    }
+                    document.getElementById('key_price').textContent = total_value;
+                    total_value = 0;
+                } else {
+                    alert('виберіть регіон (USA, CANADA, EUROPE)');
+                }
+            }
+        });
+        ///////
 
 
 
