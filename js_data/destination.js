@@ -1,29 +1,29 @@
 
 let destination = {
     destination_name: ['Klaipeda,Lithuania', 
-                        'Bremerhaven, Germany', 
-                        'Rotterdam,Netherlands', 
-                        'Gdynia, Poland'],
+                       'Bremerhaven, Germany', 
+                       'Rotterdam,Netherlands', 
+                       'Gdynia, Poland'],
                         
     location_name_USA: ['GA', 'CA', 'NY', 'TX', 'WA'],
     location_name_CANADA: ['Montreal_Toronto'],
     country: {
         USA: {
             level_1: {
-                destination_cost_0: [970, 1470, 980, 1030, 2050],
-                destination_cost_1: [850, 1570, 850, 890, 2130],
+                destination_cost_0: [970, 1575, 980, 1030, 2050],
+                destination_cost_1: [850, 1575, 850, 890, 2130],
                 destination_cost_2: [860, 1440, 875, 925, 2075],
                 destination_cost_3: [970, 1590, 1090, 1030, 2080]
             },
             level_2: {
-                destination_cost_0: [870, 1370, 880, 930, 1940],
-                destination_cost_1: [750, 1470, 750, 790, 2030],
+                destination_cost_0: [870, 1475, 880, 930, 1940],
+                destination_cost_1: [750, 1475, 750, 790, 2030],
                 destination_cost_2: [760, 1340, 775, 825, 1975],
                 destination_cost_3: [870, 1490, 990, 930, 1980]
             },
             level_3: {
-                destination_cost_0: [770, 1270, 780, 830, 1840],
-                destination_cost_1: [650, 1370, 650, 690, 1930],
+                destination_cost_0: [770, 1425, 780, 830, 1840],
+                destination_cost_1: [650, 1425, 650, 690, 1930],
                 destination_cost_2: [660, 1240, 675, 725, 1875],
                 destination_cost_3: [770, 1390, 890, 830, 1880]
             },
