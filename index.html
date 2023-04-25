@@ -36,7 +36,7 @@
                                 <select class="js-example-basic-single" id="level">                             
                                     <option value="1">Дилерський рівень 1</option>
                                     <option value="2">Дилерський рівень 2</option>
-                                    <option value="3">Дилерський рівень 3</option>
+                                    <option id="level_3" value="3" >Дилерський рівень 3</option>
                                     <option value="4">Роздріб</option>                                    
                                 </select>
                                 
@@ -52,11 +52,11 @@
                                 
                             </div>                        
                         </div>
-                        <div class="input_field search_select_box">
+                        <div class="input_field">
                             <label class="select_nam">Локація</label>
-                            <select id="location" class="selectpicker" data-live-search="true">
-                                <option value="0">Виберіть локацію</option>                                
-                            </select>
+                            <input list="location" id="location_input">
+                            <datalist id="location">
+                            </datalist>
                         </div>
                         <div class="input_field">
                             <label class="select_nam">Пункт призначення</label>
@@ -86,12 +86,9 @@
                         <div class="input_field">
                             <label class="select_nam">Паливо</label>
                             <select >
-                                <option value="0">Виберіть тип палива</option>
-                                <option value="1">item 1</option>
-                                <option value="2">item 2</option>
-                                <option value="3">item 3</option>
-                                <option value="4">item 4</option>
-                                <option value="5">item 5</option>
+                                <option value="0">Дизель</option>
+                                <option value="1">Бензин</option>
+                                <option value="2">Електро</option>
                             </select>
                         </div>
                         <div class="input_field">
@@ -111,7 +108,7 @@
                                 <td id="result-route">newyork</td>
                             </tr>
                             <tr>
-                                <td>Вартість доставки</td>
+                                <td>Вартість доставки в Європу</td>
                                 <td><span id="result">Заповніть усі дані</span> $</td>
                             </tr>
                             <tr>
@@ -139,7 +136,7 @@
                                 <td><span id="mreo">Заповніть усі дані</span> $ + пенсійний збір</td>
                             </tr>
                             <tr>
-                                <td>Ціна "Під ключ"</td>
+                                <td>Загальна ціна</td>
                                 <td><span id="key_price">Заповніть усі дані</span> $ + пенсійний збір</td>
                             </tr>
                         </tbody>
@@ -148,21 +145,26 @@
             </div>
         </section>
     </div>    
-    <div class="wrapper_logo">
+    <div class="wrapper_logo" id="enter_password">
         <div class="container_logo">
             <h1>Вхід</h1>
             <div class="container_item">                
-                <input type="text" placeholder="Логін" name="uname" required>    
+                <input id="access_level_input" type="text" placeholder="Вкажіть рівень" name="uname" list="access_level" required>
+                <datalist id="access_level">
+                    <option value="Загальний доступ"></option>
+                    <option value="Дилерський рівень 3"></option>
+                </datalist>   
             </div>
             <div class="container_item">   
-            <input type="password" placeholder="Пароль" name="psw" required>
+            <input id="pass" type="password" placeholder="Пароль" name="psw" required>
             </div>
-            <div class="container_item_remember">
+
+            <!-- <div class="container_item_remember">
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Запам'ятати мене
                     </label> 
-            </div>                      
-            <div class="button">Вхід</div>
+            </div>                       -->
+            <div id="button_enter" class="button">Вхід</div>
         </div>             
     </div>
     <script >
@@ -188,6 +190,7 @@
     <script src="js_data/other_data.js"></script>
 
     <script src="js/script.js"></script>
+    <script src="js/enter_script.js"></script>
     
 </body>
 </html>
