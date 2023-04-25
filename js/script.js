@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 select_level = document.getElementById('level'),
 
                 select_auction_name = document.getElementById('auction'),
+                location_input = document.getElementById('location_input'),
                 select_location_name = document.getElementById('location'),
                 select_destination_name = document.getElementById('destination'),
                     
@@ -61,27 +62,31 @@ window.addEventListener('DOMContentLoaded', function() {
         /////при клікові присвоюємо кнопці вибору країни класс status_on 
         wrapper_button_country.addEventListener('click', function(event) {
             let target = event.target;
-
-            //Видалення статичних опцій
-            arr_remove_location_name = select_location_name.querySelectorAll('option');
-            for(let i = 0; i < arr_remove_location_name.length; i++) {
-                arr_remove_location_name[i].remove();
-            }
-
-            arr_remove_auction_name = select_auction_name.querySelectorAll('option');
-            for(let i = 0; i < arr_remove_auction_name.length; i++) {
-                arr_remove_auction_name[i].remove();
-            }
-
-            arr_remove_destination_name = select_destination_name.querySelectorAll('option');
-            for(let i = 0; i < arr_remove_destination_name.length; i++) {
-                arr_remove_destination_name[i].remove();
-            }
-            //
-
             for(let i = 0; i < button_country.length; i++) {
                 button_country[i].classList.remove('status_on');
                 if (target == button_country[i]) {
+                    location_input.value = '';
+                    
+                    //Видалення статичних опцій
+                    arr_remove_location_name = select_location_name.querySelectorAll('option');
+                    for(let i = 0; i < arr_remove_location_name.length; i++) {
+                        arr_remove_location_name[i].remove();
+                    }
+
+                    arr_remove_auction_name = select_auction_name.querySelectorAll('option');
+                    for(let i = 0; i < arr_remove_auction_name.length; i++) {
+                        arr_remove_auction_name[i].remove();
+                    }
+
+                    arr_remove_destination_name = select_destination_name.querySelectorAll('option');
+                    for(let i = 0; i < arr_remove_destination_name.length; i++) {
+                        arr_remove_destination_name[i].remove();
+                    }
+                    //
+
+
+
+
                     button_country[i].classList.add('status_on');
                     if(button_country[i].textContent == Object.keys(objData.country)[i]) {
                         let i_obj_num = i,
@@ -104,12 +109,12 @@ window.addEventListener('DOMContentLoaded', function() {
                         }
                         for(let i = 0; i < arr_name_location.length; i++) {
                             arr_location_option[i] =  document.createElement('option');
-                            arr_location_option[i].setAttribute('value', i);
+                            arr_location_option[i].setAttribute('value', arr_name_location[i]);
                             arr_location_option[i].setAttribute('data_value', arr_cost_location[i]);
                             arr_location_option[i].setAttribute('name', arr_region_location[i]);
-                            arr_location_option[i].textContent = arr_name_location[i];
                             select_location_name.appendChild(arr_location_option[i]);
                         }
+                        console.log();
 
                         arr_name_location = [];
                         arr_cost_location = [];
@@ -133,6 +138,7 @@ window.addEventListener('DOMContentLoaded', function() {
         wrapper_calcalculator_1.addEventListener('change', function(event) {
             let target = event.target;
             if(target == select_auction_name) {
+                location_input.value = '';
                 //визначення активної країни (регіону)
                 for(let i =0; i < button_country.length; i++) {
                     if(button_country[i].classList.contains('status_on')) {
@@ -160,10 +166,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
                 for(let i = 0; i < arr_name_location.length; i++) {
                     arr_location_option[i] =  document.createElement('option');
-                    arr_location_option[i].setAttribute('value', i);
+                    arr_location_option[i].setAttribute('value', arr_name_location[i]);
                     arr_location_option[i].setAttribute('data_value', arr_cost_location[i]);
                     arr_location_option[i].setAttribute('name', arr_region_location[i]);
-                    arr_location_option[i].textContent = arr_name_location[i];
                     select_location_name.appendChild(arr_location_option[i]);
                 }
                 arr_name_location = [];
@@ -185,7 +190,10 @@ window.addEventListener('DOMContentLoaded', function() {
                         accses_calculated = true;
                     }
                 }
-                if(accses_calculated) {
+                if (accses_calculated && location_input.value == '') {
+                    alert('виберіть відповідну ЛОКАЦІЮ');
+                    
+                } else if(accses_calculated && location_input.value != '') {
                     //визначення потрібних елементів
                     //визначення активної країни (регіону)
                     for(let i =0; i < button_country.length; i++) {
@@ -196,7 +204,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     //
                     arr_location_option = select_location_name.getElementsByTagName('option');
                     for(let i =0; i < arr_location_option.length; i++) {
-                        if(select_location_name.value == arr_location_option[i].value) {
+                        if(location_input.value == arr_location_option[i].value) {
                             active_region_name = arr_location_option[i].getAttribute('name');
                             arr_calculated_data[0] = Number(arr_location_option[i].getAttribute('data_value'));
                         }
