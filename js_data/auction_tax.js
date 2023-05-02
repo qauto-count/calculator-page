@@ -37,7 +37,7 @@ let auction_tax = {
         data_34: {marg_min: 11500, marg_max: 11999.99, cost: 998},
         data_35: {marg_min: 12000, marg_max: 12499.99, cost: 1013},
         data_36: {marg_min: 12500, marg_max: 14999.99, cost: 1028},
-        data_36: {marg_min: 15000, marg_max: 1000000, cost: 1258}
+        data_37: {marg_min: 15000, marg_max: 1000000, cost: 1258}
     },
     change_data: {
         COPART: 0,
