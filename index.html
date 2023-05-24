@@ -54,7 +54,7 @@
                         </div>
                         <div class="input_field">
                             <label class="select_nam">Локація</label>
-                            <input list="location" id="location_input">
+                            <input list="location" id="location_input" input type="search">
                             <datalist id="location">
                             </datalist>
                         </div>
@@ -73,7 +73,7 @@
                     <div class="input_wrapper">
                         <div class="input_field">
                             <label class="select_nam">Ціна лоту</label>
-                            <input id="lot_price_input" class="value" type="text" onkeypress="validate(event)">
+                            <input id="lot_price_input" class="value" input type="search" onkeypress="validate(event)">
                         </div>
                         <!-- <div class="input_field">
                             <label class="select_nam">Аукціонні збори</label>
@@ -144,19 +144,35 @@
                 </div>               
             </div>
         </section>
+        <footer class="footer">
+            <div class="social_wrapper">
+                <a href="https://www.instagram.com/p/CqAGLDotCbc/?igshid=YmMyMTA2M2Y=" target="_blank">
+                    <img src="icons/instagram_icons.png" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/qautoshipping" target="_blank">
+                    <img src="icons/facebook_icons.png" alt="facebook">
+                </a>
+                <a href="https://twitter.com/qauto_shipping?s=11&t=vA_HiBvXhBbp60RxHEz9cw" target="_blank">
+                    <img src="icons/twitter_icons.png" alt="twitter">
+                </a>
+                <a href="https://t.me/+ycV29BOXB_djZGVi" target="_blank">
+                    <img src="icons/telegram_icons.png" alt="telegram">
+                </a>
+            </div>
+        </footer>
     </div>    
     <div class="wrapper_logo" id="enter_password">
         <div class="container_logo">
             <h1>Вхід</h1>
             <div class="container_item">                
-                <input id="access_level_input" type="text" placeholder="Вкажіть рівень" name="uname" list="access_level" required>
+                <input id="access_level_input" input type="search" placeholder="Вкажіть рівень" name="uname" list="access_level" required>
                 <datalist id="access_level">
                     <option value="Загальний доступ"></option>
                     <option value="Дилерський рівень 3"></option>
                 </datalist>   
             </div>
             <div class="container_item">   
-            <input id="pass" type="password" placeholder="Пароль" name="psw" required>
+            <input id="pass" type="search" placeholder="Пароль" name="psw" required>
             </div>
 
             <!-- <div class="container_item_remember">
