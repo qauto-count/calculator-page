@@ -54,7 +54,13 @@ window.addEventListener('DOMContentLoaded', function() {
             
             arr_remove_destination_name = '',
             arr_destination_option = [],
-            total_value = 0;
+            total_value = 0,
+ 
+ //////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 додавання варіацій із W1 та loop2           
+            var_w_1 = 'w_1',
+            var_loop_2 = 'loop_2',
+            active_location_var = '';
+//////////////////////////////////////////////////////////////////////////////////            
 
             wrapper_calcalculator_2.style.display = 'none';
             wrapper_result_table.style.display = 'none';
@@ -83,8 +89,6 @@ window.addEventListener('DOMContentLoaded', function() {
                         arr_remove_destination_name[i].remove();
                     }
                     //
-
-
 
 
                     button_country[i].classList.add('status_on');
@@ -216,8 +220,16 @@ window.addEventListener('DOMContentLoaded', function() {
                         }
                     }
                     arr_location_option = [];
-                    arr_calculated_data[1] = Number(objData.destination.country[active_country]['level_'+select_level.value]['destination_cost_'+select_destination_name.value][index_arr_location_name]);
-                    
+//////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 додавання варіацій із W1 та loop2
+
+                    if(/\*\*/.test(location_input.value)) {
+                        active_location_var = var_loop_2;
+                    } else {
+                        active_location_var = var_w_1;
+                }
+ ////////////////////////////////////////////                                                   ///////////////////v1
+                    arr_calculated_data[1] = Number(objData.destination.country[active_country][active_location_var]['level_'+select_level.value]['destination_cost_'+select_destination_name.value][index_arr_location_name]);
+                  
                     wrapper_calcalculator_2.style.display = 'flex';
                     wrapper_result_table.style.display = 'flex';
                     let data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
@@ -225,21 +237,32 @@ window.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('result-route').textContent = active_region_name;
                     document.getElementById('result').textContent = data_calc_1;
 
-                    arr_calculated_data[2] = Number(objData.services.country.all['level_'+select_level.value].services_cost);
+                                                                            ///////////////v1
+                    arr_calculated_data[2] = Number(objData.services.country[active_country]['level_'+select_level.value].services_cost);
                     document.getElementById('dealer_price').textContent = arr_calculated_data[2];
-                    
-                    arr_calculated_data[3] = Number(objData.services.country.all['level_'+select_level.value].complex_0[select_destination_name.value]);
+                                                                            //////////////v1
+                    arr_calculated_data[3] = Number(objData.services.country[active_country]['level_'+select_level.value].complex_0[select_destination_name.value]);
                     document.getElementById('complex_price').textContent = arr_calculated_data[3];
                     //лот і аукціонний збір
                     let lot_price_input = Number(document.getElementById('lot_price_input').value);
                     let auction_tax_value = 0;
                     active_auction = select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent;
-                    for(let i = 0; i < Object.keys(objData.auction_tax.lot_data).length; i++) {
-                        objData.auction_tax.lot_data['data_' + i].marg_min
-                        objData.auction_tax.lot_data['data_' + i].marg_max
-                        if(objData.auction_tax.lot_data['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax.lot_data['data_' + i].marg_max) {
-                            auction_tax_value = objData.auction_tax.lot_data['data_' + i].cost + objData.auction_tax.change_data[active_auction];
+                    arr_calculated_data[4] = lot_price_input + auction_tax_value;
+//////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 
+                    if(lot_price_input >= 19350) {
+                        auction_tax_value = lot_price_input*3/100;
+                    } else if(lot_price_input >= 0 && lot_price_input < 19350) {
+//////////////////////////////////////////////////////////////////////////////////                        
+                        for(let i = 0; i < Object.keys(objData.auction_tax.lot_data).length; i++) {
+                            objData.auction_tax.lot_data['data_' + i].marg_min
+                            objData.auction_tax.lot_data['data_' + i].marg_max
+                            if(objData.auction_tax.lot_data['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax.lot_data['data_' + i].marg_max) {
+                                auction_tax_value = objData.auction_tax.lot_data['data_' + i].cost + objData.auction_tax.change_data[active_auction];
+                            }
                         }
+                    //////////////////////////v1    
+                    } else {
+                        auction_tax_value = 0;
                     }
                     arr_calculated_data[4] = lot_price_input + auction_tax_value;
                     document.getElementById('full_price').textContent = arr_calculated_data[4];
@@ -262,7 +285,27 @@ window.addEventListener('DOMContentLoaded', function() {
                             arr_calculated_data[5] = 0;
                             arr_calculated_data[6] = 0;
                         }
-                    //
+//////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 hazard and financial_guarantee
+                    //hazard
+                    let select_motor_value = document.getElementById('motor').value;
+                    if(select_motor_value == '2' || select_motor_value == '3') {
+                        arr_calculated_data[7] = Number(objData.services.country[active_country]['level_'+select_level.value].hazard);
+                        document.getElementById('hazard').closest('tr').style.display = 'table-row';
+                        document.getElementById('hazard').textContent = arr_calculated_data[7];
+                    } else {
+                        document.getElementById('hazard').closest('tr').style.display = 'none';
+                        arr_calculated_data[7] = 0;
+                    }
+                    //financial_guarantee                    
+                    if(select_motor_value == '2') {
+                        arr_calculated_data[8] = Number(objData.services.country[active_country]['level_'+select_level.value].financial_guarantee);
+                        document.getElementById('financial_guarantee').closest('tr').style.display = 'table-row';
+                        document.getElementById('financial_guarantee').textContent = arr_calculated_data[8];
+                    }else {
+                        document.getElementById('financial_guarantee').closest('tr').style.display = 'none';
+                        arr_calculated_data[8] = 0;
+                    }
+//////////////////////////////////////////////////////////////////////////////////
                     for(let i = 0; i < arr_calculated_data.length; i++) {
                         total_value = total_value + arr_calculated_data[i];
                     }
