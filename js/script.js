@@ -285,7 +285,7 @@ window.addEventListener('DOMContentLoaded', function() {
                             arr_calculated_data[5] = 0;
                             arr_calculated_data[6] = 0;
                         }
-//////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 hazard and financial_guarantee
+//////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 hazard, financial_guarantee, canada_tax
                     //hazard
                     let select_motor_value = document.getElementById('motor').value;
                     if(select_motor_value == '2' || select_motor_value == '3') {
@@ -304,6 +304,15 @@ window.addEventListener('DOMContentLoaded', function() {
                     }else {
                         document.getElementById('financial_guarantee').closest('tr').style.display = 'none';
                         arr_calculated_data[8] = 0;
+                    }
+                    //canada_tax
+                    if(active_country == 'CANADA') {
+                        arr_calculated_data[9] = Number(((arr_calculated_data[4]*objData.other_data.canada_tax[0]/100)*objData.other_data.canada_tax[1]/100).toFixed(2));
+                        document.getElementById('canada_tax').closest('tr').style.display = 'table-row';
+                        document.getElementById('canada_tax').textContent = arr_calculated_data[9];
+                    } else {
+                        document.getElementById('canada_tax').closest('tr').style.display = 'none';
+                        arr_calculated_data[9] = 0;
                     }
 //////////////////////////////////////////////////////////////////////////////////
                     for(let i = 0; i < arr_calculated_data.length; i++) {
