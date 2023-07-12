@@ -58,10 +58,16 @@
                             <datalist id="location">
                             </datalist>
                         </div>
-                        <div class="input_field">
+                        <div id="visible_1" class="input_field" style="display: none;">
                             <label class="select_nam">Пункт призначення</label>
                             <select id="destination">
                                 <option value="0">Виберіть пункт призначення</option>                                
+                            </select>
+                        </div>
+                        <div id="visible_2" class="input_field" style="display: none;">
+                            <label class="select_nam">Виберіть країну</label>
+                            <select id="euro_auction">
+                                <option value="0">Виберіть регіон</option>                                
                             </select>
                         </div>
                         <div class="field_btn">
@@ -105,7 +111,7 @@
                     <table class="results_delivery">
                         <tbody>
                             <tr>
-                                <td>Відправлення з порту</td>
+                                <td>Місце відправлення</td>
                                 <td id="result-route">newyork</td>
                             </tr>
                             <tr>
@@ -124,7 +130,7 @@
                               <td>Дилерські послуги</td>
                               <td><span id="dealer_price">Заповніть усі дані</span> $</td> 
                             </tr>
-                            <tr>
+                            <tr id="visible_3">
                                <td>Комплекс</td>
                                <td><span id="complex_price">Заповніть усі дані</span> $</td>
                             </tr>
@@ -147,6 +153,14 @@
                             <tr>
                                 <td>Канадський податок</td>
                                 <td><span id="canada_tax">Заповніть усі дані</span> $</td>
+                            </tr>
+                            <tr>
+                                <td>Експортні документи</td>
+                                <td><span id="export_doc">Заповніть усі дані</span> $</td>
+                            </tr>
+                            <tr>
+                                <td>Брокер</td>
+                                <td><span id="broker">Заповніть усі дані</span> $</td>
                             </tr>
                             <tr>
                                 <td>Загальна ціна</td>
@@ -213,6 +227,7 @@
 
     <script src="js_data/canada.js"></script>
     <script src="js_data/usa.js"></script>
+    <script src="js_data/europe.js"></script>
     <script src="js_data/destination.js"></script>
     <script src="js_data/services.js"></script>
     <script src="js_data/auction_tax.js"></script>
