@@ -129,6 +129,9 @@ window.addEventListener('DOMContentLoaded', function() {
                                 arr_region_location.push(active_region_name);
                             }
                         }
+
+/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////      
+                        arr_location_option = [];
                         for(let i = 0; i < arr_name_location.length; i++) {
                             arr_location_option[i] =  document.createElement('option');
                             arr_location_option[i].setAttribute('value', arr_name_location[i]);
@@ -137,7 +140,10 @@ window.addEventListener('DOMContentLoaded', function() {
                             arr_location_option[i].setAttribute('name', arr_region_location[i]);
                             select_location_name.appendChild(arr_location_option[i]);
                         }
-
+/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////  vv   
+                        arr_location_option = [];
+                        //console.log(arr_location_option);
+/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////     
                         arr_name_location = [];
                         arr_cost_location = [];
                         arr_region_location = [];
@@ -212,6 +218,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     arr_location_option[i].setAttribute('name', arr_region_location[i]);
                     select_location_name.appendChild(arr_location_option[i]);
                 }
+                
                 arr_name_location = [];
                 arr_cost_location = [];
                 arr_region_location = [];
