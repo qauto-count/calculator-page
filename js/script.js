@@ -129,8 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 arr_region_location.push(active_region_name);
                             }
                         }
-
-/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////      
+   
                         arr_location_option = [];
                         for(let i = 0; i < arr_name_location.length; i++) {
                             arr_location_option[i] =  document.createElement('option');
@@ -139,22 +138,17 @@ window.addEventListener('DOMContentLoaded', function() {
                             arr_location_option[i].setAttribute('data_value_i', i);
                             arr_location_option[i].setAttribute('name', arr_region_location[i]);
                             select_location_name.appendChild(arr_location_option[i]);
-                        }
-/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////  vv   
-                        arr_location_option = [];
-                        //console.log(arr_location_option);
-/////////////////                 /////////////////////////                ///////////////////////////////                       ///////////////////////////     
+                        } 
+                        arr_location_option = []; 
                         arr_name_location = [];
                         arr_cost_location = [];
                         arr_region_location = [];
 ////////////////////////////////////////////////////v1 
                         if(target.classList.contains('status_on') && target.textContent == 'EUROPE') {
                             visible_block_destination.style.display = 'none';
-                            visible_block_euro_auction.style.display = 'block';
                             visible_block_complex.style.display = 'none';
                         } else {
                             visible_block_destination.style.display = 'block';
-                            visible_block_euro_auction.style.display = 'none';
                             visible_block_complex.style.display = 'table-row';
                         }
 ////////////////////////////////////////////////////v1   document.getElementById('broker').closest('tr').style.display = 'table-row';
@@ -223,6 +217,13 @@ window.addEventListener('DOMContentLoaded', function() {
                 arr_cost_location = [];
                 arr_region_location = [];
                 //
+//////////////////////////////////////////////////////////////////////////////v1                    
+                if(active_country == 'EUROPE' && select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent == 'Auto1') {
+                    visible_block_euro_auction.style.display = 'block';
+                } else {
+                    visible_block_euro_auction.style.display = 'none';
+                }
+/////////////////////////////////////////////////////////////////////////////  
             }
         });
         //////
@@ -244,12 +245,13 @@ window.addEventListener('DOMContentLoaded', function() {
                 } else if(accses_calculated && location_input.value != '') {
                     //визначення потрібних елементів
                     //визначення активної країни (регіону)
+
                     for(let i =0; i < button_country.length; i++) {
                         if(button_country[i].classList.contains('status_on')) {
                             active_country = button_country[i].textContent;
                         }
                     }
-                    //
+                  
                     arr_location_option = select_location_name.getElementsByTagName('option');
                     
                     for(let i =0; i < arr_location_option.length; i++) {
@@ -321,22 +323,29 @@ window.addEventListener('DOMContentLoaded', function() {
                                 }
                             }
                         }
+                    } else if(active_auction == 'Mobile_de' && active_country == 'EUROPE') {
+                        auction_tax_value = 0;
                     } else {
                         if(active_auction == 'Copart_de' && active_country == 'EUROPE') {
                             use_auctin_tax = 'lot_data_Copart_de';
-                        } 
+                        }
                         if(lot_price_input >= 19350 && active_auction == 'Copart_de') {
                             auction_tax_value = lot_price_input*3/100;
                         } else {
-                            for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
-                                if(objData.auction_tax[use_auctin_tax]['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax[use_auctin_tax]['data_' + i].marg_max) {
-                                    if(lot_price_input > 0) {
-                                        auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i].cost + objData.auction_tax.change_data[active_auction];
-                                    } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
-                                        auction_tax_value = 0;
+                            if(lot_price_input >= 15000) {
+                                auction_tax_value = lot_price_input*6/100;
+                            } else {
+                                for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
+                                    if(objData.auction_tax[use_auctin_tax]['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax[use_auctin_tax]['data_' + i].marg_max) {
+                                        if(lot_price_input > 0) {
+                                            auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i].cost + objData.auction_tax.change_data[active_auction];
+                                        } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
+                                            auction_tax_value = 0;
+                                        }
                                     }
                                 }
                             }
+                            
                         }
                     }
 //////////////////////////////////////////////////////////////////////////////////                     
