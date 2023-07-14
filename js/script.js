@@ -150,6 +150,12 @@ window.addEventListener('DOMContentLoaded', function() {
                         } else {
                             visible_block_destination.style.display = 'block';
                             visible_block_complex.style.display = 'table-row';
+                        }    
+
+                        if(target.classList.contains('status_on') && target.textContent == 'EUROPE' && select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent == 'Auto1') {
+                            visible_block_euro_auction.style.display = 'block';
+                        } else {
+                            visible_block_euro_auction.style.display = 'none';
                         }
 ////////////////////////////////////////////////////v1   document.getElementById('broker').closest('tr').style.display = 'table-row';
 
