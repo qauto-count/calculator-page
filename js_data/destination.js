@@ -12,22 +12,22 @@ let destination = {
         USA: {
             w_1: {
                 level_1: {
-                    destination_cost_0: [1085, 1695, 1100, 1145, 2245, 0],
+                    destination_cost_0: [1085, 1600, 1100, 1145, 2245, 0],
                     destination_cost_1: [975, 1695, 975, 1025, 2245, 0],
                     destination_cost_2: [975, 1695, 975, 1025, 2245, 0],
-                    destination_cost_3: [1085, 1695, 1100, 1145, 2245, 0]
+                    destination_cost_3: [1085, 1600, 1100, 1145, 2245, 0]
                 },
                 level_2: {
-                    destination_cost_0: [1085, 1695, 1100, 1145, 2245, 0],
+                    destination_cost_0: [1085, 1600, 1100, 1145, 2245, 0],
                     destination_cost_1: [975, 1695, 975, 1025, 2245, 0],
                     destination_cost_2: [975, 1695, 975, 1025, 2245, 0],
-                    destination_cost_3: [1085, 1695, 1100, 1145, 2245, 0]
+                    destination_cost_3: [1085, 1600, 1100, 1145, 2245, 0]
                 },
                 level_3: {
-                    destination_cost_0: [1085, 1695, 1100, 1145, 2245, 0],
+                    destination_cost_0: [1085, 1600, 1100, 1145, 2245, 0],
                     destination_cost_1: [975, 1695, 975, 1025, 2245, 0],
                     destination_cost_2: [975, 1695, 975, 1025, 2245, 0],
-                    destination_cost_3: [1085, 1695, 1100, 1145, 2245, 0]
+                    destination_cost_3: [1085, 1600, 1100, 1145, 2245, 0]
                 },
                 level_4: {
                     destination_cost_0: [1710, 2320, 1725, 1770, 2870, 0],
