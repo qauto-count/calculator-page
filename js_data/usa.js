@@ -269,7 +269,7 @@ let USA = {
                     value_48: ['PASCO (WA) 99301**', 825],
                     value_49: ['PHOENIX (AZ) 85043', 300],
                     value_50: ['PHOENIX (AZ) 85043**', 345],
-                    value_51: ['PORTLAND NORTH (OR) 97218', 600],
+                    value_51: ['PORTLAND NORTH (OR) 97218 ', 600],
                     value_52: ['PORTLAND NORTH (OR) 97218**', 700],
                     value_53: ['PORTLAND SOUTH (OR) 97071', 600],
                     value_54: ['PORTLAND SOUTH (OR) 97071**', 700],
