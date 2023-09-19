@@ -59,7 +59,7 @@ let services = {
                 services_cost: 250,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_2: {
@@ -67,7 +67,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_3: {
@@ -75,7 +75,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_4: {
