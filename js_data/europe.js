@@ -39,14 +39,14 @@ let EUROPE = {
         Otomoto_pl: {
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 900, -100, -50, 0, -100]
+                    value_0: ['EUROPE', 900, -100, -50, -250, -100]
                 }
             }
         },
         Autoplius_It:{
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 1000, -50, -50, 0, 0]
+                    value_0: ['EUROPE', 1000, -50, -50, -250, 0]
                 }
             }
         },
