@@ -3,20 +3,20 @@ let services = {
     country: {
         USA: {
             level_1: {
-                complex_0: [1400, 1750, 2050, 1400],
+                complex_0: [1350, 1850, 2150, 1350],
                 services_cost: 200,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1300, 1680, 1950, 1300],
-                services_cost: 150,
+                complex_0: [1250, 1750, 2050, 1250],
+                services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1225, 1630, 1950, 1225],
-                services_cost: 150,
+                complex_0: [1190, 1950, 1680, 1190],
+                services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
             },
@@ -29,20 +29,20 @@ let services = {
         },
         CANADA: {
             level_1: {
-                complex_0: [1400, 1750, 2050, 1400],
+                complex_0: [1350, 1850, 2150, 1350],
                 services_cost: 200,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1300, 1680, 1950, 1300],
-                services_cost: 150,
+                complex_0: [1250, 1750, 2050, 1250],
+                services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1225, 1630, 1950, 1225],
-                services_cost: 150,
+                complex_0: [1190, 1950, 1680, 1190],
+                services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
             },
@@ -59,7 +59,7 @@ let services = {
                 services_cost: 250,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_2: {
@@ -67,7 +67,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_3: {
@@ -75,7 +75,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 150,
+                export_doc: 200,
                 broker: 200
             },
             level_4: {
