@@ -12,10 +12,10 @@ let destination = {
         USA: {
             w_1: {
                 level_1: {
-                    destination_cost_0: [1085, 1600, 1100, 1145, 2245, 0],
-                    destination_cost_1: [975, 1695, 975, 1025, 2245, 0],
-                    destination_cost_2: [1085, 1600, 1100, 1145, 2245, 0],
-                    destination_cost_3: [975, 1695, 975, 1025, 2245, 0]
+                    destination_cost_0: [1085, 1725, 1200, 1275, 2345, 0],
+                    destination_cost_1: [1100, 1800, 1100, 1175, 2345, 0],
+                    destination_cost_2: [1085, 1725, 1200, 1275, 2345, 0],
+                    destination_cost_3: [1100, 1800, 1100, 1175, 2345, 0]
                 },
                 level_2: {
                     destination_cost_0: [1085, 1625, 1100, 1175, 2245, 0],
@@ -38,10 +38,10 @@ let destination = {
             },
             loop_2: {
                 level_1: {
-                    destination_cost_0: [975, 1575, 1000, 1100, 0, 1150],
-                    destination_cost_1: [950, 1575, 950, 1050, 0, 1050],
-                    destination_cost_2: [975, 1575, 1000, 1100, 0, 1150],
-                    destination_cost_3: [950, 1575, 950, 1050, 0, 1050]
+                    destination_cost_0: [1185, 1725, 1200, 1250, 0, 1725],
+                    destination_cost_1: [1100, 1800, 1100, 1200, 0, 1800],
+                    destination_cost_2: [1185, 1725, 1200, 1250, 0, 1725],
+                    destination_cost_3: [1100, 1800, 1100, 1200, 0, 1800]
                 },
                 level_2: {
                     destination_cost_0: [1085, 1625, 1100, 1150, 0, 1225],
