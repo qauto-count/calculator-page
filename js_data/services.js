@@ -9,14 +9,14 @@ let services = {
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1250, 1250, 1950, 1300],
-                services_cost: 100,
+                complex_0: [1300, 1680, 1950, 1300],
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1190, 1190, 1950, 1225],
-                services_cost: 100,
+                complex_0: [1225, 1630, 1950, 1225],
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
@@ -35,14 +35,14 @@ let services = {
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1250, 1250, 1950, 1300],
-                services_cost: 100,
+                complex_0: [1300, 1680, 1950, 1300],
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1190, 1190, 1950, 1225],
-                services_cost: 100,
+                complex_0: [1225, 1630, 1950, 1225],
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
@@ -59,7 +59,7 @@ let services = {
                 services_cost: 250,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 200,
+                export_doc: 150,
                 broker: 200
             },
             level_2: {
@@ -67,7 +67,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 200,
+                export_doc: 150,
                 broker: 200
             },
             level_3: {
@@ -75,7 +75,7 @@ let services = {
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 200,
+                export_doc: 150,
                 broker: 200
             },
             level_4: {
