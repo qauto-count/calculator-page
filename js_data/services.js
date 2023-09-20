@@ -9,13 +9,13 @@ let services = {
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1250, 1750, 2050, 1250],
+                complex_0: [1150, 1750, 2050, 1150],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1190, 1680, 1950, 1190],
+                complex_0: [1150, 1680, 1950, 1150],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
