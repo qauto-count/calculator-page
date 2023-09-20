@@ -36,6 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 ////////////////////////////
             wrapper_calcalculator_2 = document.getElementById('calculator_2'),
             wrapper_result_table = document.getElementById('result-table'),
+                arr_currency_symbol = wrapper_result_table.getElementsByClassName('currency_symbol'),
             button_calculated_1 = document.getElementById('calculated_1'),
             button_calculated_2 = document.getElementById('calculated_2'),
             /////////////////////////////////v1
@@ -72,7 +73,8 @@ window.addEventListener('DOMContentLoaded', function() {
  //////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 додавання варіацій із W1 та loop2           
             var_w_1 = 'w_1',
             var_loop_2 = 'loop_2',
-            active_location_var = '';
+            active_location_var = '',
+            currency_symbol = '';
 //////////////////////////////////////////////////////////////////////////////////            
 
             wrapper_calcalculator_2.style.display = 'none';
@@ -85,6 +87,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 button_country[i].classList.remove('status_on');
                 if (target == button_country[i]) {
                     location_input.value = '';
+                    //додавання символу валюти
+                    if(button_country[i].textContent == 'EUROPE') {
+                        currency_symbol = '€';
+                    } else {
+                        currency_symbol = '$';
+                    }
+                    for(let i =0; i < arr_currency_symbol.length; i++) {
+                        arr_currency_symbol[i].textContent = currency_symbol;
+                    }
                     
                     //Видалення статичних опцій
                     arr_remove_location_name = select_location_name.querySelectorAll('option');
@@ -282,7 +293,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
  ////////////////////////////////////////////                                                   ///////////////////v1
                     arr_calculated_data[1] = Number(objData.destination.country[active_country][active_location_var]['level_'+select_level.value]['destination_cost_'+select_destination_name.value][index_arr_location_name]);
-                  
+                    
                     wrapper_calcalculator_2.style.display = 'flex';
                     wrapper_result_table.style.display = 'flex';
 //////////////////////////////////////////////////////////////////////////////////v1 add EUROPE data    
@@ -296,11 +307,17 @@ window.addEventListener('DOMContentLoaded', function() {
                             }
                         }
                         arr_location_option = [];
+                        console.log(arr_calculated_data[0]);
                         arr_calculated_data[0] = arr_calculated_data[0] + var_location_europe;
+                        console.log(arr_calculated_data[0]);
                         data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
                     } else {
                         data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
                     }
+                    console.log(arr_calculated_data[0]);
+                    console.log(data_calc_1);
+
+
                     
 
 //////////////////////////////////////////////////////////////////////////////////        
@@ -309,9 +326,11 @@ window.addEventListener('DOMContentLoaded', function() {
                                                                             ///////////////v1
                     arr_calculated_data[2] = Number(objData.services.country[active_country]['level_'+select_level.value].services_cost);
                     document.getElementById('dealer_price').textContent = arr_calculated_data[2];
+                    
                                                                             //////////////v1
                     arr_calculated_data[3] = Number(objData.services.country[active_country]['level_'+select_level.value].complex_0[select_destination_name.value]);
                     document.getElementById('complex_price').textContent = arr_calculated_data[3];
+                    
                     //лот і аукціонний збір
                     let lot_price_input = Number(document.getElementById('lot_price_input').value);
                     let auction_tax_value = 0;
