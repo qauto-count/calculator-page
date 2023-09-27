@@ -30,7 +30,7 @@ let services = {
         CANADA: {
             level_1: {
                 complex_0: [1350, 1850, 2150, 1350],
-                services_cost: 150,
+                services_cost: 250,
                 hazard: 200,
                 financial_guarantee: 50
             },
@@ -41,7 +41,7 @@ let services = {
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1190, 1680, 1950, 1190],
+                complex_0: [1190, 1150, 1150, 1190],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
@@ -80,10 +80,10 @@ let services = {
             },
             level_4: {
                 complex_0: [0, 0, 0, 0],
-                services_cost: 300,
+                services_cost: 600,
                 hazard: 0,
                 financial_guarantee: 100,
-                export_doc: 250,
+                export_doc: 300,
                 broker: 250
             }
         }
