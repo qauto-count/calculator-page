@@ -12,22 +12,22 @@ let destination = {
         USA: {
             w_1: {
                 level_1: {
-                    destination_cost_0: [1085, 1725, 1200, 1275, 2345, 0],
-                    destination_cost_1: [1100, 1800, 1100, 1175, 2345, 0],
-                    destination_cost_2: [1100, 1800, 1100, 1175, 2345, 0],
-                    destination_cost_3: [1085, 1725, 1200, 1275, 2345, 0]
+                    destination_cost_0: [1410, 1950, 1425, 1500, 2570, 0],
+                    destination_cost_1: [1325, 2025, 1325, 1400, 2570, 0],
+                    destination_cost_2: [1325, 2025, 1325, 1400, 2570, 0],
+                    destination_cost_3: [1410, 1950, 1425, 1500, 2570, 0]
                 },
                 level_2: {
-                    destination_cost_0: [1085, 1625, 1100, 1175, 2245, 0],
-                    destination_cost_1: [1000, 1700, 1000, 1075, 2245, 0],
-                    destination_cost_2: [1000, 1700, 1000, 1075, 2245, 0],
-                    destination_cost_3: [1085, 1625, 1100, 1175, 2245, 0]
+                    destination_cost_0: [1110, 1650, 1125, 1200, 2270, 0],
+                    destination_cost_1: [1025, 1725, 1025, 1100, 2245, 0],
+                    destination_cost_2: [1025, 1725, 1025, 1100, 2245, 0],
+                    destination_cost_3: [1110, 1650, 1125, 1200, 2270, 0]
                 },
                 level_3: {
-                    destination_cost_0: [1085, 1625, 1100, 1175, 2245, 0],
-                    destination_cost_1: [1000, 1700, 1000, 1075, 2245, 0],
-                    destination_cost_2: [1000, 1700, 1000, 1075, 2245, 0],
-                    destination_cost_3: [1085, 1625, 1100, 1175, 2245, 0]
+                    destination_cost_0: [1110, 1650, 1125, 1200, 2270, 0],
+                    destination_cost_1: [1025, 1725, 1025, 1100, 2245, 0],
+                    destination_cost_2: [1025, 1725, 1025, 1100, 2245, 0],
+                    destination_cost_3: [1110, 1650, 1125, 1200, 2270, 0]
                 },
                 level_4: {
                     destination_cost_0: [2110, 2625, 2125, 2170, 3270, 0],
@@ -38,22 +38,22 @@ let destination = {
             },
             loop_2: {
                 level_1: {
-                    destination_cost_0: [1185, 1725, 1200, 1250, 0, 1725],
-                    destination_cost_1: [1100, 1800, 1100, 1200, 0, 1800],
-                    destination_cost_2: [1100, 1800, 1100, 1200, 0, 1800],
-                    destination_cost_3: [1185, 1725, 1200, 1250, 0, 1725]
+                    destination_cost_0: [1410, 1950, 1425, 1475, 0, 1550],
+                    destination_cost_1: [1325, 2025, 1325, 1425, 0, 1375],
+                    destination_cost_2: [1325, 2025, 1325, 1425, 0, 1375],
+                    destination_cost_3: [1410, 1950, 1425, 1475, 0, 1550]
                 },
                 level_2: {
-                    destination_cost_0: [1085, 1625, 1100, 1150, 0, 1225],
-                    destination_cost_1: [1000, 1700, 1000, 1100, 0, 1050],
-                    destination_cost_2: [1000, 1700, 1000, 1100, 0, 1050],
-                    destination_cost_3: [1085, 1625, 1100, 1150, 0, 1225]
+                    destination_cost_0: [1110, 1650, 1125, 1175, 0, 1250],
+                    destination_cost_1: [1025, 1725, 1025, 1125, 0, 1075],
+                    destination_cost_2: [1025, 1725, 1025, 1125, 0, 1075],
+                    destination_cost_3: [1110, 1650, 1125, 1175, 0, 1250]
                 },
                 level_3: {
-                    destination_cost_0: [1085, 1625, 1100, 1150, 0, 1225],
-                    destination_cost_1: [1000, 1700, 1000, 1100, 0, 1050],
-                    destination_cost_2: [1000, 1700, 1000, 1100, 0, 1050],
-                    destination_cost_3: [1085, 1625, 1100, 1150, 0, 1225]
+                    destination_cost_0: [1110, 1650, 1125, 1175, 0, 1250],
+                    destination_cost_1: [1025, 1725, 1025, 1125, 0, 1075],
+                    destination_cost_2: [1025, 1725, 1025, 1125, 0, 1075],
+                    destination_cost_3: [1110, 1650, 1125, 1175, 0, 1250]
                 },
                 level_4: {
                     destination_cost_0: [2000, 2600, 2025, 2125, 0, 2175],

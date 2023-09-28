@@ -3,19 +3,19 @@ let services = {
     country: {
         USA: {
             level_1: {
-                complex_0: [1350, 1850, 2150, 1350],
-                services_cost: 200,
+                complex_0: [1200, 1800, 2000, 1200],
+                services_cost: 250,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1150, 1750, 2050, 1150],
-                services_cost: 100,
+                complex_0: [1060, 1700, 1900, 1060],
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1150, 1680, 1950, 1150],
+                complex_0: [920, 1580, 1780, 920],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
@@ -29,19 +29,19 @@ let services = {
         },
         CANADA: {
             level_1: {
-                complex_0: [1350, 1850, 2150, 1350],
+                complex_0: [1200, 1800, 2000, 1200],
                 services_cost: 250,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1250, 1750, 2050, 1250],
+                complex_0: [1060, 1700, 1900, 1060],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [1190, 1150, 1150, 1190],
+                complex_0: [920, 1580, 1780, 920],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50
