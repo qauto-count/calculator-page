@@ -18,16 +18,16 @@ let destination = {
                     destination_cost_3: [1410, 1950, 1425, 1500, 2570, 0]
                 },
                 level_2: {
-                    destination_cost_0: [1110, 1650, 1125, 1200, 2270, 0],
-                    destination_cost_1: [1025, 1725, 1025, 1100, 2245, 0],
-                    destination_cost_2: [1025, 1725, 1025, 1100, 2245, 0],
-                    destination_cost_3: [1110, 1650, 1125, 1200, 2270, 0]
+                    destination_cost_0: [1135, 1700, 1155, 1225, 2320, 0],
+                    destination_cost_1: [1050, 1770, 1070, 1150, 2320, 0],
+                    destination_cost_2: [1050, 1770, 1070, 1150, 2320, 0],
+                    destination_cost_3: [1135, 1700, 1155, 1225, 2320, 0]
                 },
                 level_3: {
-                    destination_cost_0: [1110, 1650, 1125, 1200, 2270, 0],
-                    destination_cost_1: [1025, 1725, 1025, 1100, 2245, 0],
-                    destination_cost_2: [1025, 1725, 1025, 1100, 2245, 0],
-                    destination_cost_3: [1110, 1650, 1125, 1200, 2270, 0]
+                    destination_cost_0: [1135, 1700, 1155, 1225, 2320, 0],
+                    destination_cost_1: [1050, 1770, 1070, 1150, 2320, 0],
+                    destination_cost_2: [1050, 1770, 1070, 1150, 2320, 0],
+                    destination_cost_3: [1135, 1700, 1155, 1225, 2320, 0]
                 },
                 level_4: {
                     destination_cost_0: [2110, 2625, 2125, 2170, 3270, 0],
@@ -44,16 +44,16 @@ let destination = {
                     destination_cost_3: [1410, 1950, 1425, 1475, 0, 1550]
                 },
                 level_2: {
-                    destination_cost_0: [1110, 1650, 1125, 1175, 0, 1250],
-                    destination_cost_1: [1025, 1725, 1025, 1125, 0, 1075],
-                    destination_cost_2: [1025, 1725, 1025, 1125, 0, 1075],
-                    destination_cost_3: [1110, 1650, 1125, 1175, 0, 1250]
+                    destination_cost_0: [1135, 1700, 1170, 1220, 0, 1300],
+                    destination_cost_1: [1050, 1770, 1070, 1150, 0, 1120],
+                    destination_cost_2: [1050, 1770, 1070, 1150, 0, 1120],
+                    destination_cost_3: [1135, 1700, 1170, 1220, 0, 1300]
                 },
                 level_3: {
-                    destination_cost_0: [1110, 1650, 1125, 1175, 0, 1250],
-                    destination_cost_1: [1025, 1725, 1025, 1125, 0, 1075],
-                    destination_cost_2: [1025, 1725, 1025, 1125, 0, 1075],
-                    destination_cost_3: [1110, 1650, 1125, 1175, 0, 1250]
+                    destination_cost_0: [1135, 1700, 1170, 1220, 0, 1300],
+                    destination_cost_1: [1050, 1770, 1070, 1150, 0, 1120],
+                    destination_cost_2: [1050, 1770, 1070, 1150, 0, 1120],
+                    destination_cost_3: [1135, 1700, 1170, 1220, 0, 1300]
                 },
                 level_4: {
                     destination_cost_0: [2000, 2600, 2025, 2125, 0, 2175],

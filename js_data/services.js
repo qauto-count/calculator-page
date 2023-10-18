@@ -9,16 +9,16 @@ let services = {
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1060, 1700, 1900, 1060],
+                complex_0: [950, 1700, 1900, 950],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [920, 1580, 1780, 920],
+                complex_0: [750, 1580, 1780, 750],
                 services_cost: 100,
                 hazard: 200,
-                financial_guarantee: 50
+                financial_guarantee: 0
             },
             level_4: {
                 complex_0: [1600, 1950, 2200, 1600],
@@ -35,16 +35,16 @@ let services = {
                 financial_guarantee: 50
             },
             level_2: {
-                complex_0: [1060, 1700, 1900, 1060],
+                complex_0: [950, 1700, 1900, 950],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50
             },
             level_3: {
-                complex_0: [920, 1580, 1780, 920],
+                complex_0: [750, 1580, 1780, 750],
                 services_cost: 100,
                 hazard: 200,
-                financial_guarantee: 50
+                financial_guarantee: 0
             },
             level_4: {
                 complex_0: [1600, 1950, 2200, 1600],
