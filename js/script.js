@@ -212,6 +212,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 //
                 //визначення активного аукціону активної країни (регіону)
                 active_auction = select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent;
+                console.log(active_auction);
                 //
                 //видалення усього переліку локацій
                 arr_remove_location_name = select_location_name.querySelectorAll('option');
@@ -305,6 +306,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     wrapper_result_table.style.display = 'flex';
 //////////////////////////////////////////////////////////////////////////////////v1 add EUROPE data    
                     active_auction = select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent;
+                    //23.102023 додавання деталізованої назви напрямку доставки
+                    name_delivery_direction.textContent = objData.country[active_country].auction[active_auction].delivery_direction;
+
                     let data_calc_1 = 0;
                     if(active_country == 'EUROPE') {
                         let var_location_europe = 0;
@@ -321,6 +325,17 @@ window.addEventListener('DOMContentLoaded', function() {
                     } else {
                         data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
                     }
+                    //23.10.2023 choose_auto
+                    let select_choose_auto = document.getElementById('choose_auto').value,
+                        mark_up_choosen_auto = '';
+                    if(select_choose_auto == '1' && select_level.value != '4') {
+                        mark_up_choosen_auto = objData.other_data.mark_up_cros;
+                        data_calc_1 = data_calc_1 + mark_up_choosen_auto;
+                    }
+                    mark_up_choosen_auto = 0;
+                    
+                    // 
+                    
                     console.log(arr_calculated_data[0]);
                     console.log(data_calc_1);
 
@@ -355,7 +370,7 @@ window.addEventListener('DOMContentLoaded', function() {
                                 }
                             }
                         }
-                    } else if(active_auction == 'Mobile_de' && active_country == 'EUROPE') {
+                    } else if(active_country == 'EUROPE' && active_auction == 'Mobile_de' ||  active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adessa') {
                         auction_tax_value = 0;
                     } else {
                         if(active_auction == 'Copart_de' && active_country == 'EUROPE') {
@@ -453,6 +468,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         document.getElementById('broker').closest('tr').style.display = 'none';
                         arr_calculated_data[11] = 0;
                     }
+
 //////////////////////////////////////////////////////////////////////////////////
                     for(let i = 0; i < arr_calculated_data.length; i++) {
                         total_value = total_value + arr_calculated_data[i];
