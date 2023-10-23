@@ -56,26 +56,26 @@ let services = {
         EUROPE: {
             level_1: {
                 complex_0: [0, 0, 0, 0],
-                services_cost: 250,
+                services_cost: 300,
                 hazard: 0,
                 financial_guarantee: 50,
                 export_doc: 200,
-                broker: 200
+                broker: 250
             },
             level_2: {
                 complex_0: [0, 0, 0, 0],
-                services_cost: 200,
+                services_cost: 250,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 200,
-                broker: 200
+                export_doc: 100,
+                broker: 250
             },
             level_3: {
                 complex_0: [0, 0, 0, 0],
                 services_cost: 200,
                 hazard: 0,
                 financial_guarantee: 50,
-                export_doc: 200,
+                export_doc: 100,
                 broker: 200
             },
             level_4: {

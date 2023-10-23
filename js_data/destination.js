@@ -94,15 +94,15 @@ let destination = {
         EUROPE: {
             w_1: {
                 level_1: {
-                    destination_cost_0: [150],
-                    destination_cost_1: [150],
-                    destination_cost_2: [150],
-                    destination_cost_3: [150]
+                    destination_cost_0: [0],
+                    destination_cost_1: [0],
+                    destination_cost_2: [0],
+                    destination_cost_3: [0]
                 },
                 level_2: {
-                    destination_cost_0: [50],
-                    destination_cost_1: [50],
-                    destination_cost_2: [50],
+                    destination_cost_0: [0],
+                    destination_cost_1: [0],
+                    destination_cost_2: [0],
                     destination_cost_3: [0]
                 },
                 level_3: {
@@ -112,10 +112,10 @@ let destination = {
                     destination_cost_3: [0]
                 },
                 level_4: {
-                    destination_cost_0: [200],
-                    destination_cost_1: [200],
-                    destination_cost_2: [200],
-                    destination_cost_3: [200]
+                    destination_cost_0: [0],
+                    destination_cost_1: [0],
+                    destination_cost_2: [0],
+                    destination_cost_3: [0]
                 }
             }
         }

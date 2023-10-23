@@ -2,6 +2,7 @@
 let CANADA = {
     auction: {
         IMPACT: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['LONDON', 475],
@@ -24,6 +25,7 @@ let CANADA = {
             }
         },
         SGI_SALVAGE: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['Offsite + TOWING', 2600],
@@ -32,6 +34,7 @@ let CANADA = {
             }
         },
         MANITOBA_PUBLIC: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['MANITOBA', 1250],
@@ -42,6 +45,7 @@ let CANADA = {
             }
         },
         COPART: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['WINDSOR', 850],
@@ -60,6 +64,7 @@ let CANADA = {
             }
         },
         STARKS: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['TORONTO', 400]
@@ -67,6 +72,7 @@ let CANADA = {
             }
         },
         Daniellessard: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['QUEBEC', 450]
@@ -74,6 +80,7 @@ let CANADA = {
             }
         },
         ICBC: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 Montreal_Toronto: {
                     value_0: ['New Westminster', 2400],

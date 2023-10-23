@@ -2,6 +2,7 @@
 let USA = {
     auction: {
         Adesa: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 GA: {
                     value_0: ['Atlanta 30213**', 350],
@@ -90,6 +91,7 @@ let USA = {
             }
         },
         COPART: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 GA: {
                     value_0: ['APPLETON, WI 54914', 725],
@@ -544,6 +546,7 @@ let USA = {
             }
         },
         IAAI: {
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 GA: {
                     value_0: ['300', 225],
@@ -964,6 +967,7 @@ let USA = {
             }
         },
         Mannheim:{
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 GA: {
                     value_0: ['Atlanta', 300],
@@ -1162,6 +1166,7 @@ let USA = {
             }
         },
         TRA:{
+            delivery_direction: 'Вартість доставки в Європу',
             location: {
                 GA: {
                     value_0: ['Columbia-29073**', 255],
