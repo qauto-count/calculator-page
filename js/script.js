@@ -37,6 +37,7 @@ window.addEventListener('DOMContentLoaded', function() {
             wrapper_calcalculator_2 = document.getElementById('calculator_2'),
             wrapper_result_table = document.getElementById('result-table'),
                 arr_currency_symbol = wrapper_result_table.getElementsByClassName('currency_symbol'),
+                name_delivery_direction = wrapper_result_table.getElementsByClassName('delivery_direction')[0],
             button_calculated_1 = document.getElementById('calculated_1'),
             button_calculated_2 = document.getElementById('calculated_2'),
             /////////////////////////////////v1
@@ -90,8 +91,14 @@ window.addEventListener('DOMContentLoaded', function() {
                     //додавання символу валюти
                     if(button_country[i].textContent == 'EUROPE') {
                         currency_symbol = '€';
+                        //23.10.2023 зміна назви місця з якого проводиться доставка
+                        name_delivery_direction.textContent = 'Вартість доставки з Європи';
+                        //
                     } else {
                         currency_symbol = '$';
+                        //23.10.2023 зміна назви місця з якого проводиться доставка
+                        name_delivery_direction.textContent = 'Вартість доставки в Європу';
+                        //
                     }
                     for(let i =0; i < arr_currency_symbol.length; i++) {
                         arr_currency_symbol[i].textContent = currency_symbol;
