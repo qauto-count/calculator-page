@@ -69,6 +69,9 @@ window.addEventListener('DOMContentLoaded', function() {
             /////////////v1
             arr_euro_auction_option = [],
             /////////////
+            //23.10.2023
+            mark_up_choosen_auto = '',
+            //
             total_value = 0,
  
  //////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 додавання варіацій із W1 та loop2           
@@ -212,7 +215,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 //
                 //визначення активного аукціону активної країни (регіону)
                 active_auction = select_auction_name.getElementsByTagName('option')[select_auction_name.value].textContent;
-                console.log(active_auction);
                 //
                 //видалення усього переліку локацій
                 arr_remove_location_name = select_location_name.querySelectorAll('option');
@@ -301,6 +303,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
  ////////////////////////////////////////////                                                   ///////////////////v1
                     arr_calculated_data[1] = Number(objData.destination.country[active_country][active_location_var]['level_'+select_level.value]['destination_cost_'+select_destination_name.value][index_arr_location_name]);
+                    //25.10.2023 додавання загальної націнки для моря
+                    arr_calculated_data[1] = arr_calculated_data[1] + objData.destination.country[active_country][active_location_var]['level_'+select_level.value].mark_up_total_data;
+                    //
                     
                     wrapper_calcalculator_2.style.display = 'flex';
                     wrapper_result_table.style.display = 'flex';
@@ -318,31 +323,24 @@ window.addEventListener('DOMContentLoaded', function() {
                             }
                         }
                         arr_location_option = [];
-                        console.log(arr_calculated_data[0]);
                         arr_calculated_data[0] = arr_calculated_data[0] + var_location_europe;
-                        console.log(arr_calculated_data[0]);
                         data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
                     } else {
                         data_calc_1 = arr_calculated_data[0] + arr_calculated_data[1];
                     }
-                    //23.10.2023 choose_auto
-                    let select_choose_auto = document.getElementById('choose_auto').value,
-                        mark_up_choosen_auto = '';
-                    if(select_choose_auto == '1' && select_level.value != '4') {
-                        mark_up_choosen_auto = objData.other_data.mark_up_cros;
-                        data_calc_1 = data_calc_1 + mark_up_choosen_auto;
+//////////////////////////////////////////////////////////////////////////////////
+
+                    //23.10.2023, 25.10.2023 choose_auto
+                    let select_choose_auto = document.getElementById('choose_auto').value;
+                    if(select_choose_auto == '1') {
+                    mark_up_choosen_auto = objData.services.country[active_country]['level_'+select_level.value].mark_up_crossover;
+                    data_calc_1 = data_calc_1 + mark_up_choosen_auto;
+                    arr_calculated_data[0] = arr_calculated_data[0] +mark_up_choosen_auto;
                     }
                     mark_up_choosen_auto = 0;
-                    
+
                     // 
-                    
-                    console.log(arr_calculated_data[0]);
-                    console.log(data_calc_1);
 
-
-                    
-
-//////////////////////////////////////////////////////////////////////////////////        
                     document.getElementById('result-route').textContent = active_region_name;
                     document.getElementById('result').textContent = data_calc_1;
                                                                             ///////////////v1
@@ -357,35 +355,67 @@ window.addEventListener('DOMContentLoaded', function() {
                     let lot_price_input = Number(document.getElementById('lot_price_input').value);
                     let auction_tax_value = 0;
                     arr_calculated_data[4] = lot_price_input + auction_tax_value;
+
+
+                    
 //////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 
-                    let use_auctin_tax = 'lot_data';
+                    //25.10.2023 виправлення розрахунку з додаванням нових 2-х значень
+                    function calcTaxValue (tax_name) {
+                        let auction_tax_value = 0;
+                        for(let i = 0; i < Object.keys(objData.auction_tax[tax_name]).length; i++) {
+                            if(objData.auction_tax[tax_name]['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax[tax_name]['data_' + i].marg_max) {
+                                auction_tax_value = objData.auction_tax[tax_name]['data_' + i].cost;
+                                return auction_tax_value;
+                            } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
+                                auction_tax_value = 0;
+                            }
+                        }
+                    }
+                    //
+                    let use_auctin_tax = '';
+                    use_auctin_tax = 'lot_data';
                     if(active_auction == 'Auto1' && active_country == 'EUROPE') {
-                        use_auctin_tax = 'lot_data_auto1';
-                        for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
-                            if(i == select_euro_aucnion_name.value) {
-                                if(lot_price_input > 0) {
-                                    auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i][1];
-                                } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
-                                    auction_tax_value = 0;
+                        if(select_level.value == '4') {
+                            auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
+                        } else {
+                            use_auctin_tax = 'lot_data_auto1';
+                            for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
+                                if(i == select_euro_aucnion_name.value) {
+                                    if(lot_price_input > 0) {
+                                        auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i][1];
+                                    } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
+                                        auction_tax_value = 0;
+                                    }
                                 }
                             }
                         }
-                    } else if(active_country == 'EUROPE' && active_auction == 'Mobile_de' ||  active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adessa') {
+                    } else if(active_country == 'EUROPE' && active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adessa') {
+                        if(select_level.value == '4') {
+                            auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
+                        } else {
+                            auction_tax_value = 0;
+                        }
+                    } else if (active_country == 'EUROPE' && active_auction == 'Mobile_de') {
                         auction_tax_value = 0;
                     } else {
                         if(active_auction == 'Copart_de' && active_country == 'EUROPE') {
                             use_auctin_tax = 'lot_data_Copart_de';
+                            if(select_level.value == '4') {
+                                auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
+                                use_auctin_tax = 'lot_data_auto1';
+                            }
                         }
                         if(lot_price_input >= 19350 && active_auction == 'Copart_de') {
                             auction_tax_value = lot_price_input*3/100;
                         } else {
                             if(lot_price_input >= 15000) {
-                                auction_tax_value = lot_price_input*6/100;
+                                auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
                             } else {
                                 for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
                                     if(objData.auction_tax[use_auctin_tax]['data_' + i].marg_min <= lot_price_input && lot_price_input <= objData.auction_tax[use_auctin_tax]['data_' + i].marg_max) {
                                         if(lot_price_input > 0) {
                                             auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i].cost + objData.auction_tax.change_data[active_auction];
+                                            
                                         } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
                                             auction_tax_value = 0;
                                         }
@@ -400,23 +430,23 @@ window.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('full_price').textContent = arr_calculated_data[4];
                     //
                     //сертифікат і мрео
-                        //визначення value поточного рівня
-                        active_level = select_level.value;
-                        //
-                        if(active_level == 4) {
-                            arr_calculated_data[5] = objData.other_data.certificate;
-                            arr_calculated_data[6] = objData.other_data.mreo;
-                            document.getElementById('certificate').closest('tr').style.display = 'table-row';
-                                document.getElementById('certificate').textContent = arr_calculated_data[5];
-                            document.getElementById('mreo').closest('tr').style.display = 'table-row';
-                                document.getElementById('mreo').textContent = arr_calculated_data[6];
-                            
-                        } else {
-                            document.getElementById('certificate').closest('tr').style.display = 'none';
-                            document.getElementById('mreo').closest('tr').style.display = 'none';
-                            arr_calculated_data[5] = 0;
-                            arr_calculated_data[6] = 0;
-                        }
+                    //визначення value поточного рівня
+                    active_level = select_level.value;
+                    //
+                    if(active_level == 4) {
+                        arr_calculated_data[5] = objData.other_data.certificate;
+                        arr_calculated_data[6] = objData.other_data.mreo;
+                        document.getElementById('certificate').closest('tr').style.display = 'table-row';
+                            document.getElementById('certificate').textContent = arr_calculated_data[5];
+                        document.getElementById('mreo').closest('tr').style.display = 'table-row';
+                            document.getElementById('mreo').textContent = arr_calculated_data[6];
+                        
+                    } else {
+                        document.getElementById('certificate').closest('tr').style.display = 'none';
+                        document.getElementById('mreo').closest('tr').style.display = 'none';
+                        arr_calculated_data[5] = 0;
+                        arr_calculated_data[6] = 0;
+                    }
 //////////////////////////////////////////////////////////////////////////////////v1 07.07.2023 new data: hazard, financial_guarantee, canada_tax, export_doc, broker
                     //hazard
                     let select_motor_value = document.getElementById('motor').value;
