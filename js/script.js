@@ -372,21 +372,27 @@ window.addEventListener('DOMContentLoaded', function() {
                         }
                     }
                     //
-                    let use_auctin_tax = '';
+                    let use_auctin_tax = '',
+                        land_auction_tax_value = '';
                     use_auctin_tax = 'lot_data';
                     if(active_auction == 'Auto1' && active_country == 'EUROPE') {
-                        if(select_level.value == '4') {
-                            auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
-                        } else {
-                            use_auctin_tax = 'lot_data_auto1';
+                        use_auctin_tax = 'lot_data_auto1';
                             for(let i = 0; i < Object.keys(objData.auction_tax[use_auctin_tax]).length; i++) {
                                 if(i == select_euro_aucnion_name.value) {
                                     if(lot_price_input > 0) {
-                                        auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i][1];
+                                        land_auction_tax_value = objData.auction_tax[use_auctin_tax]['data_' + i][1];
                                     } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
-                                        auction_tax_value = 0;
+                                        land_auction_tax_value = 0;
                                     }
                                 }
+                            }
+                        if(select_level.value == '4') {
+                            auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction] + land_auction_tax_value;
+                        } else {
+                            if(lot_price_input > 0) {
+                                auction_tax_value = land_auction_tax_value;
+                            } else if (lot_price_input == 0 || lot_price_input == '0' || lot_price_input == '') {
+                                auction_tax_value = 0;
                             }
                         }
                     } else if(active_country == 'EUROPE' && active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adessa') {
