@@ -76,9 +76,9 @@ let destination = {
                 level_1: {
                     mark_up_total_data: 0,
                     destination_cost_0: [1750],
-                    destination_cost_1: [1650],
-                    destination_cost_2: [1650],
-                    destination_cost_3: [1650]
+                    destination_cost_1: [1750],
+                    destination_cost_2: [1750],
+                    destination_cost_3: [1750]
                 },
                 level_2: {
                     mark_up_total_data: 0,
