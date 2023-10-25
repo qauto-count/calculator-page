@@ -40,6 +40,21 @@ let auction_tax = {
         data_37: {marg_min: 12000, marg_max: 12499.99, cost: 1033},
         data_38: {marg_min: 12500, marg_max: 14999.99, cost: 1048}
     },
+    lot_data_online: {
+        data_0: {marg_min: 0, marg_max: 99.99, cost: 0},
+        data_1: {marg_min: 100, marg_max: 499.99, cost: 49},
+        data_2: {marg_min: 500, marg_max: 999.99, cost: 59},
+        data_3: {marg_min: 1000, marg_max: 1499.99, cost: 79},
+        data_4: {marg_min: 1500, marg_max: 1999.99, cost: 89},
+        data_5: {marg_min: 2000, marg_max: 3999.99, cost: 99},
+        data_6: {marg_min: 4000, marg_max: 5999.99, cost: 109},
+        data_7: {marg_min: 6000, marg_max: 7999.99, cost: 139},
+        data_8: {marg_min: 8000, marg_max: 10000000, cost: 149}
+    },
+    lot_data_gate_free: {
+        data_0: {marg_min: 0, marg_max: 0, cost: 0},
+        data_1: {marg_min: 0.01, marg_max: 10000000, cost: 109}
+    },
     lot_data_Copart_de: {
         data_0: {marg_min: 0, marg_max: 0, cost: 0},
         data_1: {marg_min: 0.01, marg_max: 118.99, cost: 34},
