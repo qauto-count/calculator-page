@@ -37,21 +37,21 @@ let services = {
                 services_cost: 250,
                 hazard: 200,
                 financial_guarantee: 50,
-                mark_up_crossover: 100
+                mark_up_crossover: 250
             },
             level_2: {
                 complex_0: [950, 1700, 1900, 950],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50,
-                mark_up_crossover: 100
+                mark_up_crossover: 250
             },
             level_3: {
                 complex_0: [750, 1580, 1780, 750],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
-                mark_up_crossover: 100
+                mark_up_crossover: 250
             },
             level_4: {
                 complex_0: [1600, 1950, 2200, 1600],
