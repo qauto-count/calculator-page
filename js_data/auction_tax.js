@@ -108,6 +108,7 @@ let auction_tax = {
         Autoplius_It: 0,
         Alcopa: 0,
         Norway: 0,
-        Auto1: 0
+        Auto1: 0,
+        BCA: 0
     }
 }

@@ -86,7 +86,7 @@ let EUROPE = {
                 }
             }
         },
-        Adessa: {
+        Adesa: {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
