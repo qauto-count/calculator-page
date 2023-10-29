@@ -395,13 +395,13 @@ window.addEventListener('DOMContentLoaded', function() {
                                 auction_tax_value = 0;
                             }
                         }
-                    } else if(active_country == 'EUROPE' && active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adessa') {
+                    } else if(active_country == 'EUROPE' && active_auction == 'Alcopa' || active_auction == 'BCA' || active_auction == 'Adesa') {
                         if(select_level.value == '4') {
                             auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
                         } else {
                             auction_tax_value = 0;
                         }
-                    } else if (active_country == 'EUROPE' && active_auction == 'Mobile_de') {
+                    } else if (active_country == 'EUROPE' && active_auction == 'Mobile_de' || active_auction == 'Autoplius_It' || active_auction == 'Otomoto_pl'|| active_auction == 'Norway') {
                         auction_tax_value = 0;
                     } else {
                         if(active_auction == 'Copart_de' && active_country == 'EUROPE') {
