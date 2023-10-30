@@ -20,17 +20,17 @@ let destination = {
                 },
                 level_2: {
                     mark_up_total_data: 0,
-                    destination_cost_0: [1185, 1750, 1205, 1275, 2370, 0],
-                    destination_cost_1: [1100, 1820, 1120, 1200, 2370, 0],
-                    destination_cost_2: [1100, 1820, 1120, 1200, 2370, 0],
-                    destination_cost_3: [1185, 1750, 1205, 1275, 2370, 0]
+                    destination_cost_0: [1185, 1750, 1205, 1275, 2250, 0],
+                    destination_cost_1: [1100, 1820, 1120, 1200, 2250, 0],
+                    destination_cost_2: [1100, 1820, 1120, 1200, 2250, 0],
+                    destination_cost_3: [1185, 1750, 1205, 1275, 2250, 0]
                 },
                 level_3: {
                     mark_up_total_data: 0,
-                    destination_cost_0: [1185, 1750, 1205, 1275, 2370, 0],
-                    destination_cost_1: [1100, 1820, 1120, 1200, 2370, 0],
-                    destination_cost_2: [1100, 1820, 1120, 1200, 2370, 0],
-                    destination_cost_3: [1185, 1750, 1205, 1275, 2370, 0]
+                    destination_cost_0: [1185, 1750, 1205, 1275, 2250, 0],
+                    destination_cost_1: [1100, 1820, 1120, 1200, 2250, 0],
+                    destination_cost_2: [1100, 1820, 1120, 1200, 2250, 0],
+                    destination_cost_3: [1185, 1750, 1205, 1275, 2250, 0]
                 },
                 level_4: {
                     mark_up_total_data: 0,

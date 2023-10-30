@@ -10,14 +10,14 @@ let services = {
                 mark_up_crossover: 250
             },
             level_2: {
-                complex_0: [950, 1700, 1900, 950],
+                complex_0: [900, 900, 900, 900],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_3: {
-                complex_0: [750, 1580, 1780, 750],
+                complex_0: [800, 800, 800, 800],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
@@ -40,14 +40,14 @@ let services = {
                 mark_up_crossover: 250
             },
             level_2: {
-                complex_0: [950, 1700, 1900, 950],
+                complex_0: [900, 900, 900, 900],
                 services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_3: {
-                complex_0: [750, 1580, 1780, 750],
+                complex_0: [800, 800, 800, 800],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
