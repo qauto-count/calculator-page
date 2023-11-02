@@ -311,7 +311,7 @@ let USA = {
                     value_83: ['VALLEJO (CA) 94590', 375],
                     value_84: ['VALLEJO (CA) 94590**', 400],
                     value_85: ['VAN NUYS (CA) 91405', 180],
-                    value_86: ['VAN NUYS (CA) 91405**', 270]
+                    value_86: ['VAN NUYS (CA) 91405**', 270],
                     value_87: ['Los Angeles South (CA) 90744', 140],
                     value_88: ['Los Angeles South (CA) 90744**', 220]
                  },
