@@ -28,7 +28,7 @@ let services = {
                 services_cost: 600,
                 hazard: 300,
                 financial_guarantee: 100,
-                mark_up_crossover: 0
+                mark_up_crossover: 250
             }
         },
         CANADA: {
@@ -58,7 +58,7 @@ let services = {
                 services_cost: 600,
                 hazard: 300,
                 financial_guarantee: 100,
-                mark_up_crossover: 0
+                mark_up_crossover: 250
             }
         },
         EUROPE: {
@@ -96,7 +96,7 @@ let services = {
                 financial_guarantee: 100,
                 export_doc: 300,
                 broker: 250,
-                mark_up_crossover: 0
+                mark_up_crossover: 100
             }
         }
     }
