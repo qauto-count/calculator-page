@@ -16,7 +16,7 @@ let EUROPE = {
                     value_7: ['Leipzig', 0, 1300, 1200, 1150, 1600],
                     value_8: ['Mannheim', 0, 1400, 1300, 1250, 1700],
                     value_9: ['Munchen-Ost', 0, 1400, 1300, 1250, 1800],
-                    value_10: ['Sttuttgart', 0, 1500, 1400, 1350, 1800]
+                    value_10: ['Sttuttgart', 0, 1500, 1400, 1350, 1700]
                 }
             }
         },
@@ -42,7 +42,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1200]
                 }
             }
         },
@@ -50,7 +50,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1200]
                 }
             }
         },
@@ -58,7 +58,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 2100]
+                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
                 }
             }
         },
@@ -66,7 +66,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 1650, 1550, 1450, 1850]
+                    value_0: ['EUROPE', 0, 1650, 1550, 1450, 1800]
                 }
             }
         },
@@ -82,7 +82,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1300]
+                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
                 }
             }
         },
@@ -90,7 +90,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1300]
+                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
                 }
             }
         }

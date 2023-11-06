@@ -34,10 +34,10 @@ let destination = {
                 },
                 level_4: {
                     mark_up_total_data: 0,
-                    destination_cost_0: [2110, 2625, 2125, 2170, 3270, 0],
-                    destination_cost_1: [2000, 2720, 2000, 2050, 3270, 0],
-                    destination_cost_2: [2000, 2720, 2000, 2050, 3270, 0],
-                    destination_cost_3: [2110, 2625, 2125, 2170, 3270, 0]
+                    destination_cost_0: [1925, 2475, 1950, 2025, 2900, 0],
+                    destination_cost_1: [1895, 2615, 1900, 1935, 2900, 0],
+                    destination_cost_2: [1895, 2615, 1900, 1935, 2900, 0],
+                    destination_cost_3: [1925, 2475, 1950, 2025, 2900, 0]
                 }
             },
             loop_2: {
@@ -64,10 +64,10 @@ let destination = {
                 },
                 level_4: {
                     mark_up_total_data: 0,
-                    destination_cost_0: [2000, 2600, 2025, 2125, 0, 2175],
-                    destination_cost_1: [1975, 2600, 1975, 2075, 0, 2075],
-                    destination_cost_2: [1975, 2600, 1975, 2075, 0, 2075],
-                    destination_cost_3: [2000, 2600, 2025, 2125, 0, 2175]
+                    destination_cost_0: [1900, 2475, 1925, 2025, 0, 2075],
+                    destination_cost_1: [1875, 2475, 1875, 1975, 0, 1975],
+                    destination_cost_2: [1875, 2475, 1875, 1975, 0, 1975],
+                    destination_cost_3: [1900, 2475, 1925, 2025, 0, 2075]
                 }
             }
         },
@@ -96,10 +96,10 @@ let destination = {
                 },
                 level_4: {
                     mark_up_total_data: 0,
-                    destination_cost_0: [2500],
-                    destination_cost_1: [2400],
-                    destination_cost_2: [2400],
-                    destination_cost_3: [2500]
+                    destination_cost_0: [2300],
+                    destination_cost_1: [2300],
+                    destination_cost_2: [2300],
+                    destination_cost_3: [2300]
                 }
             }
         },
