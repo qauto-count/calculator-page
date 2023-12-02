@@ -102,12 +102,14 @@ let auction_tax = {
         STARKS: 0,
         Daniellessard: 0,
         ICBC: 0,
+        OPENLANE: 0,
         Copart_de: 0,
         Mobile_de: 0,
         Otomoto_pl: 0,
         Autoplius_It: 0,
         Alcopa: 0,
-        Norway: 0,
+        auksjonen_no: 0,
+        FINN_no: 0,
         Auto1: 0,
         BCA: 0
     }

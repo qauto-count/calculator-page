@@ -50,7 +50,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 850, 750, 750, 1200]
+                    value_0: ['EUROPE', 0, 850, 800, 750, 1200]
                 }
             }
         },
@@ -58,15 +58,23 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
                 }
             }
         },
-        Norway:{
+        auksjonen_no:{
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 1650, 1550, 1450, 1800]
+                    value_0: ['EUROPE', 0, 1750, 1650, 1600, 1900]
+                }
+            }
+        },
+        FINN_no:{
+            delivery_direction: 'Вартість доставки з Європи',
+            location: {
+                EUROPE: {
+                    value_0: ['EUROPE', 0, 1750, 1650, 1600, 1900]
                 }
             }
         },
@@ -74,7 +82,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
                 }
             }
         },
@@ -82,15 +90,15 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
                 }
             }
         },
-        Adesa: {
+        OPENLANE: {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 800, 650, 650, 1200]
+                    value_0: ['EUROPE', 0, 850, 750, 750, 1300]
                 }
             }
         }
