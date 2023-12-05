@@ -404,14 +404,17 @@ window.addEventListener('DOMContentLoaded', function() {
                     } else if (active_country == 'EUROPE' && active_auction == 'Mobile_de' || active_auction == 'Autoplius_It' || active_auction == 'Otomoto_pl'|| active_auction == 'auksjonen_no' || active_auction == 'FINN_no') {
                         auction_tax_value = 0;
                     } else {
-                        if(active_auction == 'Copart_de' || active_auction == 'Autobid_de' && active_country == 'EUROPE') {
+                        if(active_auction == 'Copart_de' && active_country == 'EUROPE') {
                             use_auctin_tax = 'lot_data_Copart_de';
                             if(select_level.value == '4') {
                                 auction_tax_value = lot_price_input*6/100 + calcTaxValue('lot_data_online') + calcTaxValue('lot_data_gate_free') + objData.auction_tax.change_data[active_auction];
                                 use_auctin_tax = 'lot_data_auto1';
                             }
                         }
-                        if(lot_price_input >= 19350 && active_auction == 'Copart_de' || active_auction == 'Autobid_de') {
+                        if(active_auction == 'Autobid_de' && active_country == 'EUROPE' && select_level.value != '4') {
+                            use_auctin_tax = 'lot_data_Copart_de';
+                        }
+                        if(lot_price_input >= 19350 && active_auction == 'Copart_de') {
                             auction_tax_value = lot_price_input*3/100;
                         } else {
                             if(lot_price_input >= 15000) {
