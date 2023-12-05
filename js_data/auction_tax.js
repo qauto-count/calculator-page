@@ -104,6 +104,7 @@ let auction_tax = {
         ICBC: 0,
         OPENLANE: 0,
         Copart_de: 0,
+        Autobid_de: 0,
         Mobile_de: 0,
         Otomoto_pl: 0,
         Autoplius_It: 0,

@@ -20,6 +20,24 @@ let EUROPE = {
                 }
             }
         },
+        Autobid_de: {
+            delivery_direction: 'Вартість доставки з Європи',
+            location: {
+                EUROPE: {
+                    value_0: ['AAchen', 0, 1400, 1300, 1250, 1700],
+                    value_1: ['Berlin-West', 0, 1200, 1150, 1100, 1500],
+                    value_2: ['Berlin Robert', 0, 1200, 1150, 1100, 1500],
+                    value_3: ['Dortmund', 0, 1400, 1300, 1250, 1700],
+                    value_4: ['Frankfurt', 0, 1350, 1250, 1200, 1600],
+                    value_5: ['Hamburg', 0, 1350, 1250, 1200, 1500],
+                    value_6: ['Hannover', 0, 1300, 1200, 1150, 1500],
+                    value_7: ['Leipzig', 0, 1300, 1200, 1150, 1600],
+                    value_8: ['Mannheim', 0, 1400, 1300, 1250, 1700],
+                    value_9: ['Munchen-Ost', 0, 1400, 1300, 1250, 1800],
+                    value_10: ['Sttuttgart', 0, 1500, 1400, 1350, 1700]
+                }
+            }
+        },
         Mobile_de: {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
@@ -66,7 +84,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 1750, 1650, 1600, 1900]
+                    value_0: ['EUROPE', 0, 1800, 1700, 1650, 1900]
                 }
             }
         },
@@ -74,7 +92,7 @@ let EUROPE = {
             delivery_direction: 'Вартість доставки з Європи',
             location: {
                 EUROPE: {
-                    value_0: ['EUROPE', 0, 1750, 1650, 1600, 1900]
+                    value_0: ['EUROPE', 0, 1800, 1700, 1650, 1900]
                 }
             }
         },
