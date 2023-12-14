@@ -17,7 +17,7 @@ let services = {
                 mark_up_crossover: 250
             },
             level_3: {
-                complex_0: [1100, 1850, 2050, 1100],
+                complex_0: [1150, 1850, 2050, 1150],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
