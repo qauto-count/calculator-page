@@ -3,29 +3,29 @@ let services = {
     country: {
         USA: {
             level_1: {
-                complex_0: [1450, 2050, 2250, 1450],
-                services_cost: 250,
-                hazard: 200,
+                complex_0: [1500, 2050, 2200, 1500],
+                services_cost: 300,
+                hazard: 300,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_2: {
-                complex_0: [1200, 1950, 2150, 1200],
-                services_cost: 150,
+                complex_0: [1400, 1850, 2000, 1400],
+                services_cost: 200,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_3: {
-                complex_0: [1150, 1850, 2050, 1150],
+                complex_0: [1300, 1800, 2000, 1300],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
                 mark_up_crossover: 250
             },
             level_4: {
-                complex_0: [1700, 2600, 2800, 1700],
-                services_cost: 600,
+                complex_0: [1500, 2050, 2200, 1500],
+                services_cost: 500,
                 hazard: 300,
                 financial_guarantee: 100,
                 mark_up_crossover: 250
@@ -33,29 +33,29 @@ let services = {
         },
         CANADA: {
             level_1: {
-                complex_0: [1450, 2050, 2250, 1450],
-                services_cost: 250,
-                hazard: 200,
+                complex_0: [1500, 2050, 2200, 1500],
+                services_cost: 300,
+                hazard: 300,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_2: {
-                complex_0: [1200, 1950, 2150, 1200],
-                services_cost: 150,
+                complex_0: [1400, 1850, 2000, 1400],
+                services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
             },
             level_3: {
-                complex_0: [1100, 1850, 2050, 1100],
+                complex_0: [1300, 1800, 2000, 1300],
                 services_cost: 100,
                 hazard: 200,
                 financial_guarantee: 0,
                 mark_up_crossover: 250
             },
             level_4: {
-                complex_0: [1700, 2600, 2800, 1700],
-                services_cost: 600,
+                complex_0: [1500, 2050, 2200, 1500],
+                services_cost: 500,
                 hazard: 300,
                 financial_guarantee: 100,
                 mark_up_crossover: 250
