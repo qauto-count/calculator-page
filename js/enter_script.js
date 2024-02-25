@@ -13,8 +13,8 @@ password_input.style.display = 'none';
 level_3.style.display = 'none';
 
 /// 18.10.2023 delete password start
-level_3.style.display = 'block';
-wrapper_block_password.style.display = 'none';
+//level_3.style.display = 'block';
+//wrapper_block_password.style.display = 'none';
 /// 18.10.2023 delete password ok
 
 /// change 
