@@ -11,7 +11,7 @@ let services = {
             },
             level_2: {
                 complex_0: [1400, 1850, 2000, 1400],
-                services_cost: 200,
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
@@ -41,7 +41,7 @@ let services = {
             },
             level_2: {
                 complex_0: [1400, 1850, 2000, 1400],
-                services_cost: 100,
+                services_cost: 150,
                 hazard: 200,
                 financial_guarantee: 50,
                 mark_up_crossover: 250
